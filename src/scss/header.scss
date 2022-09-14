@@ -1,0 +1,211 @@
+//====================================================================================================
+.header {
+  @include adaptiveValue("margin-left", 550, 270, 1920, 991.98, 1);
+  @include adaptiveValue("font-size", 16, 14, 1920, 991.98, 1);
+  position: relative;
+  height: 130px;
+  font-weight: 700;
+
+  @media (max-width: $tablet) {
+    font-size: 14px;
+  }
+
+  &::before {
+    z-index: 2;
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    border: 2px solid #bd1900;
+  }
+
+  // .header__container
+
+  &__container {
+  }
+
+  // .header__menu
+
+  &__menu {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+
+    @media (max-width: 1300px) {
+      flex-direction: column-reverse;
+      gap: 10px;
+    }
+  }
+}
+
+.menu-header {
+  // .menu-header__body
+
+  &__body {
+  }
+
+  // .menu-header__list
+
+  &__list {
+    display: flex;
+    gap: 14px;
+  }
+
+  // .menu-header__item
+
+  &__item {
+    display: flex;
+  }
+
+  // .menu-header__button
+
+  &__button {
+    line-height: math.div(13, 16);
+
+    font-weight: 700;
+    padding: 8px;
+    border: 2px solid $mainColorBrown;
+
+    border-radius: 20px;
+    transition: all 0.25s;
+
+    &:hover {
+      box-shadow: none;
+      border: 2px solid #fff;
+      letter-spacing: 1px;
+      background-color: $mainColorBrown;
+      color: #fff;
+    }
+  }
+
+  // .menu-header__top
+
+  &__top {
+    display: flex;
+    gap: 30px;
+  }
+
+  // .menu-header__contacts
+
+  &__contacts {
+  }
+
+  // .menu-header__button
+
+  &__button {
+  }
+}
+.contacts {
+  // .contacts__tel
+
+  &__tel {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+
+  // .contacts__icon
+
+  &__icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  // .contacts__number
+
+  &__number {
+  }
+
+  // .contacts__messengers
+
+  &__messengers {
+    font-size: rem(10);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .contacts__telegram
+
+  &__telegram {
+  }
+
+  // .contacts__whatsapp
+
+  &__whatsapp {
+  }
+
+  // .contacts__viber
+
+  &__viber {
+  }
+}
+.button {
+  text-transform: uppercase;
+  display: flex;
+  border: 2px solid $mainColorBrown;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
+  white-space: nowrap;
+  font-weight: 700;
+  // .button__brown
+
+  &__brown {
+  }
+}
+
+//====================================================================================================
+
+//Burger
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+*/

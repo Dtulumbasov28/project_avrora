@@ -1,0 +1,117 @@
+.socials {
+
+  
+    // .socials__item РАЗНЫЕ ЦВЕТА
+  //   :root {
+  //     --bg: #dcdde1;
+  //     --color-icon: #535c68;
+  //     --social-icon1: #e4405f;
+  //     --social-icon2: #3b5999;
+  //     --social-icon3: #e4405f;
+  //     --social-icon4: #cd201f;
+  //     --social-icon5: #cd201f;
+  //   }
+    //   &__item {
+    //     &:nth-child(1) {
+    //       a {
+    //         &:hover {
+    //           &::before {
+    //             background: var(--social-icon1);
+    //           }
+    //         }
+    //       }
+    //     }
+    //     &:nth-child(2) {
+    //       a {
+    //         &:hover {
+    //           &::before {
+    //             background: var(--social-icon2);
+    //           }
+    //         }
+    //       }
+    //     }
+    //     &:nth-child(3) {
+    //       a {
+    //         &:hover {
+    //           &::before {
+    //             background: var(--social-icon3);
+    //           }
+    //         }
+    //       }
+    //     }
+    //     &:nth-child(4) {
+    //       a {
+    //         &:hover {
+    //           &::before {
+    //             background: var(--social-icon4);
+    //           }
+    //         }
+    //       }
+    //     }
+    //     &:nth-child(5) {
+    //       a {
+    //         &:hover {
+    //           &::before {
+    //             background: var(--social-icon5);
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+  
+    // .socials__item
+  
+    &__item {
+      a {
+        &:hover {
+          &::before {
+            background: $mainColorBrown;
+          }
+        }
+      }
+    }
+  
+    // .socials__link
+  
+    &__link {
+      display: inline-flex;
+      font-size: 3rem;
+      text-decoration: none;
+      color: var(--color-icon);
+      width: 24px;
+      height: 24px;
+      transition: 0.5s linear;
+      position: relative;
+      z-index: 1;
+      margin: auto;
+  
+      &:hover {
+        &::before {
+          transform: scale(2);
+        }
+      }
+  
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 24px;
+        height: 24px;
+        background: #000;
+        border-radius: 50%;
+        z-index: -1;
+        transform: scale(0);
+        transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+      }
+    }
+  
+    // .socials__icon
+  
+    &__icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
