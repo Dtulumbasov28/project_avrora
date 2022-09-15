@@ -1,7 +1,7 @@
 .fixed-menu {
   @include adaptiveValue("width", 480, 280, 1920, 991.98, 1);
-  @include adaptiveValue("font-size", 20, 16, 1520, 991.98, 1);
-  @include adaptiveValue("padding-right", 130, 10, 1920, 991.98, 1);
+  @include adaptiveValue("font-size", 20, 14, 1520, 991.98, 1);
+  @include adaptiveValue("padding-right", 130, 40, 1920, 991.98, 1);
   @include adaptiveValue("padding-left", 30, 10, 1920, 991.98, 1);
   position: fixed;
   top: 0;
@@ -18,6 +18,30 @@
   font-family: $fontFamilyPlayfair;
   font-weight: 700;
   color: #fff;
+
+  @media (max-height: 700px) {
+    padding: 0px 40px 0px 0px;
+
+    & .fixed-menu__list {
+      gap: 10px;
+    }
+    & .fixed-menu__decor {
+      display: none;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: $mainColorBlue;
+    border-radius: 0px 0px 30px 30px;
+    padding: 0px 30px 0px 30px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
   // .fixed-menu__logo
 
   &__logo {
@@ -28,6 +52,11 @@
   &__icon {
     width: 150px;
     height: 188px;
+
+    @media (max-width: $tablet) {
+      width: 40px;
+      height: 50px;
+    }
   }
 
   // .fixed-menu__body
@@ -36,20 +65,23 @@
     position: relative;
     line-height: math.div(26, 20);
 
-    &::before,
-    &::after {
-      content: url(@img/decor_fixed-menu.svg);
-      position: absolute;
-      left: 50%;
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  // .fixed-menu__decor
+
+  &__decor {
+    width: 110px;
+    height: 40px;
+
+    &--two {
+      transform: rotate(180deg);
     }
 
-    &::before {
-      bottom: 105%;
-      transform: translateX(-50%);
-    }
-    &::after {
-      top: 105%;
-      transform: translateX(-50%) rotate(180deg);
+    @media (max-width: $tablet) {
+      display: none;
     }
   }
 
@@ -69,17 +101,17 @@
     transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
 
     &:hover {
-        color: $mainColorBrown;
-        transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
-        
-    //     height: rem(100);
-    //   &::after {
-    //     content: url(@img/decor_fixed-menu.svg);
-    //     position: absolute;
-    //     top: 30px;
-    //     left: 50%;
-    //     transform: translateX(-50%) rotate(180deg);
-    //   }
+      color: $mainColorBrown;
+      transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+
+      //     height: rem(100);
+      //   &::after {
+      //     content: url(@img/decor_fixed-menu.svg);
+      //     position: absolute;
+      //     top: 30px;
+      //     left: 50%;
+      //     transform: translateX(-50%) rotate(180deg);
+      //   }
     }
   }
 
@@ -96,5 +128,10 @@
     width: 100%;
     max-width: 50rem;
     padding: 0 1.5rem;
+
+    @media (max-width: $tablet) {
+      justify-content: center;
+      gap: 30px;
+    }
   }
 }

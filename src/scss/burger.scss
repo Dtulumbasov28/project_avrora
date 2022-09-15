@@ -1,0 +1,128 @@
+//Burger
+
+.icon-menu {
+    display: none;
+    @media (max-width: $tablet) {
+      display: block;
+      position: relative;
+      width: rem(30);
+      height: rem(18);
+      cursor: pointer;
+      z-index: 5;
+      span,
+      &::before,
+      &::after {
+        content: "";
+        transition: all 0.3s ease 0s;
+        right: 0;
+        position: absolute;
+        width: 100%;
+        height: rem(2);
+        background-color: #fff;
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+      span {
+        top: calc(50% - rem(1));
+      }
+      .menu-open & {
+        span {
+          width: 0;
+        }
+        &::before,
+        &::after {
+        }
+        &::before {
+          top: calc(50% - rem(1));
+          transform: rotate(-45deg);
+        }
+        &::after {
+          bottom: calc(50% - rem(1));
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+  
+  @keyframes fadeInFromNone {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+  
+    1% {
+      display: block;
+      opacity: 0;
+    }
+  
+    100% {
+      display: flex;
+      opacity: 1;
+    }
+  }
+  
+  .menu-open {
+    @media (max-width: $tablet) {
+      & .burger__body {
+        animation: fadeInFromNone 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+  
+        position: fixed;
+        transition: bottom 0.5s ease;
+  
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $mainColorBlue;
+      }
+  
+      .fixed-menu__list {
+        color: #fff;
+      }
+    }
+  }
+  .burger {
+    // .burger__menu
+  
+    &__menu {
+    }
+  
+    // .burger__body
+  
+    &__body {
+      display: none;
+    }
+  
+    // .burger__list
+  
+    &__list {
+    }
+  
+    // .burger__item
+  
+    &__item {
+    }
+  }
+  .menu {
+    // .menu__icon
+  
+    &__icon {
+    }
+  
+    // .menu__link
+  
+    &__link {
+    }
+  }
+  .icon-menu {
+  }
+  

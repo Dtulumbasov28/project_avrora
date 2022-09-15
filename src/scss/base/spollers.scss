@@ -3,54 +3,49 @@
 
 // Блок со спойлерами
 .spollers {
-	display: grid;
-	gap: 15px;
+  @include adaptiveValue("margin-left", 110, 40, 1920, 991.98, 1);
+  @include adaptiveValue("width", 800, 700, 1920, 991.98, 1);
+
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  border-radius: 20px;
+  border: 2px solid $mainColorBrown;
 }
 // Спойлер
 .spollers__item {
-	font-size: rem(20);
+  position: relative;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 auto;
+  gap: 16px;
+
+  padding: 16px 32px;
+
+  border-right: 2px solid $mainColorBrown;
+
+  &:nth-child(4) {
+    border-right: none;
+  }
 }
 // Заголовок спойлера
 .spollers__title {
-	width: 100%;
-	cursor: default;
-	text-align: left;
-	border: 1px solid #eee;
-	padding: rem(10) rem(15);
-	border-radius: rem(5);
-	position: relative;
-	._spoller-init & {
-		cursor: pointer;
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			right: 10px;
-			top: 50%;
-			background-color: #000;
-			height: 2px;
-			width: 15px;
-			transition: transform 0.5s ease 0s;
-		}
-		&::before {
-			transform: translate(-75%, -50%) rotate(40deg);
-		}
-		&::after {
-			transform: translate(0, -50%) rotate(-40deg);
-		}
-		&._spoller-active {
-			&::before {
-				transform: translateX(-75%) rotate(-40deg);
-			}
-			&::after {
-				transform: rotate(40deg);
-			}
-		}
-	}
+  cursor: default;
+
+  ._spoller-init & {
+    cursor: pointer;
+  }
 }
 // Контент спойлера
 .spollers__body {
-	padding: rem(20);
-	border-radius: rem(5);
-	border: 1px solid #eee;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  padding: 4px;
+
+  border-radius: 20px;
+  background-color: #fff;
 }
