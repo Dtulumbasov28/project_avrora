@@ -94,50 +94,64 @@
   <section class="main">
     <div class="main__container">
       <!-- Оболочка слайдера -->
-      <div class="main__slider swiper">
-        <div class="main__content content-swiper">
-          <h2 class="content-swiper__subtitle">
-            ИСПОЛЬЗОВАНИЕ МЕТОДИК МИРОВОГО УРОВНЯ
-          </h2>
-          <h1 class="content-swiper__title">
-            ЦЕНТР РЕАБИЛИТАЦИ В САНКТ-ПЕТЕРБУРГЕ
-          </h1>
-          <div class="content-swiper__text">
-            <span>Приватность.</span>
-            <span>Комплексность.</span>
-            <span>Комфорт.</span>
+      <div class="one">
+        <div class="main__slider swiper">
+          <div class="main__content content-swiper">
+            <h2 class="content-swiper__subtitle">
+              ИСПОЛЬЗОВАНИЕ МЕТОДИК МИРОВОГО УРОВНЯ
+            </h2>
+            <h1 class="content-swiper__title">
+              ЦЕНТР РЕАБИЛИТАЦИ В САНКТ-ПЕТЕРБУРГЕ
+            </h1>
+            <div class="content-swiper__text">
+              <span>Приватность.</span>
+              <span>Комплексность.</span>
+              <span>Комфорт.</span>
+            </div>
+            <button class="content-swiper__button button">
+              КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА
+            </button>
           </div>
-          <button class="content-swiper__button button">
-            КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА
-          </button>
+          <!-- Двигающееся часть слайдера -->
+          <div class="main__wrapper swiper-wrapper">
+            <!-- Слайд -->
+            <div class="main__slide swiper-slide">
+              <img src="@img/slide.jpg" alt="" />
+            </div>
+
+            <div class="main__slide swiper-slide">
+              <img src="@img/slide2.jpg" alt="" />
+            </div>
+
+            <div class="main__slide swiper-slide">
+              <img src="@img/slide.jpg" alt="" />
+            </div>
+          </div>
+          <!-- Если нужна пагинация -->
+          <div class="swiper-pagination"></div>
         </div>
-        <!-- Двигающееся часть слайдера -->
-        <div class="main__wrapper swiper-wrapper">
-          <!-- Слайд -->
-          <div class="main__slide swiper-slide">
-            <img src="@img/slide.jpg" alt="" />
-          </div>
-          <div class="main__slide swiper-slide">
-            <img src="@img/slide.jpg" alt="" />
-          </div>
-          <div class="main__slide swiper-slide">
-            <img src="@img/slide.jpg" alt="" />
-          </div>
-        </div>
-        <!-- Если нужна пагинация -->
-        <div class="swiper-pagination"></div>
       </div>
 
-      <div data-spollers data-one-spoller data-spollers-speed="700" class="main__spollers spollers">
+      <div
+        data-spollers
+        data-one-spoller
+        data-spollers-speed="700"
+        class="main__spollers spollers"
+      >
         <div class="spollers__item">
           <div class="spollers__desc">не имеющая аналогов</div>
           <div class="spollers__text">Уникальня программа</div>
 
-          <button type="button" data-spoller data-spoller-close class="spollers__title">
+          <button
+            type="button"
+            data-spoller
+            data-spoller-close
+            class="spollers__title"
+          >
             Подробнее
           </button>
           <div class="spollers__body">
-            <div  class="spollers__body-title">Уникальня программа</div>
+            <div class="spollers__body-title">Уникальня программа</div>
             <span>
               Предметом особой гордости для нас является наличие положительной
               репутации в профессиональном сообществе, а также множество
@@ -149,7 +163,12 @@
           <div class="spollers__desc">Соблюдаем условия анонимности</div>
           <div class="spollers__text">не ставим на учет</div>
 
-          <button type="button" data-spoller data-spoller-close class="spollers__title">
+          <button
+            type="button"
+            data-spoller
+            data-spoller-close
+            class="spollers__title"
+          >
             Подробнее
           </button>
           <div class="spollers__body">
@@ -165,7 +184,12 @@
           <div class="spollers__desc">Многоледний опыт</div>
           <div class="spollers__text">Работы с зависимых</div>
 
-          <button type="button" data-spoller data-spoller-close class="spollers__title">
+          <button
+            type="button"
+            data-spoller
+            data-spoller-close
+            class="spollers__title"
+          >
             Подробнее
           </button>
           <div class="spollers__body">
@@ -181,7 +205,12 @@
           <div class="spollers__desc">Современные подходы</div>
           <div class="spollers__text">Мотивации на лечения</div>
 
-          <button type="button" data-spoller data-spoller-close class="spollers__title">
+          <button
+            type="button"
+            data-spoller
+            data-spoller-close
+            class="spollers__title"
+          >
             Подробнее
           </button>
           <div class="spollers__body">
@@ -192,6 +221,446 @@
               рекомендаций наших пациентов.
             </span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about">
+    <div class="about__container">
+      <h3 class="about__title-left section__title-left">О КЛИНИКЕ АВРОРА</h3>
+      <div class="about__qualities qualities">
+        <h3 class="qualities__title">
+          Современный Реабилитационный центр психиатрии и наркологии
+        </h3>
+        <ul class="qualities__list">
+          <li class="qualities__item">
+            <svg class="qualities__decor">
+              <use xlink:href="@img/icons/icons.svg#svg-decor_qualities"></use>
+            </svg>
+            <span>
+              Уникальный курс нейрокогнитивной и микронутритивной поддержки;
+            </span>
+          </li>
+          <li class="qualities__item">
+            <svg class="qualities__decor">
+              <use xlink:href="@img/icons/icons.svg#svg-decor_qualities"></use>
+            </svg>
+            <span> Личная программа без групповой терапии; </span>
+          </li>
+          <li class="qualities__item">
+            <svg class="qualities__decor">
+              <use xlink:href="@img/icons/icons.svg#svg-decor_qualities"></use>
+            </svg>
+            <span> Интенсивность 11 ч. в день. 24 вида терапии; </span>
+          </li>
+          <li class="qualities__item">
+            <svg class="qualities__decor">
+              <use xlink:href="@img/icons/icons.svg#svg-decor_qualities"></use>
+            </svg>
+            <span>
+              Уникальный курс нейрокогнитивной и микронутритивной поддержки;
+            </span>
+          </li>
+          <li class="qualities__item">
+            <svg class="qualities__decor">
+              <use xlink:href="@img/icons/icons.svg#svg-decor_qualities"></use>
+            </svg>
+            <span> Личная программа без групповой терапии; </span>
+          </li>
+          <li class="qualities__item">
+            <svg class="qualities__decor">
+              <use xlink:href="@img/icons/icons.svg#svg-decor_qualities"></use>
+            </svg>
+            <span> Интенсивность 11 ч. в день. 24 вида терапии; </span>
+          </li>
+        </ul>
+      </div>
+      <div class="about__body">
+        <svg class="section__decor">
+          <use xlink:href="@img/icons/icons.svg#svg-decor_section"></use>
+        </svg>
+        <h2 class="about__title section__title">
+          КОМПЛЕКСНАЯ СИНЕРГИЧНАЯ ПРОГРАММА
+        </h2>
+        <h3 class="about__subtitle section__subtitle">
+          Для каждого пациента разрабатывается уникальная программа лечения из 8
+          блоков
+        </h3>
+        <div class="about__desc">
+          Комплексный подход позволяет всесторонне воздействовать на симптомы и
+          причины заболевания. Каждый блок программы увеличивает эффективность
+          других ее составляющих.
+        </div>
+        <div class="two">
+          <div class="about__cards">
+            <!-- Оболочка слайдера -->
+            <div class="about__slider">
+              <!-- Двигающееся часть слайдера -->
+              <div class="about__wrapper">
+                <!-- Слайд -->
+                <div class="about__card card swiper-slide">
+                  <img
+                    class="card__img"
+                    src="@img/slide_about.jpg"
+                    alt="Кризисная терапия"
+                  />
+                  <h4 class="card__title">
+                    1. Кризисная терапия и стабилизация состояния
+                  </h4>
+                  <div class="card__desc">
+                    С целью лечения острого состояния, а также восстановления
+                    работы органов и систем организма,- для каждого пациента
+                    разрабатывается
+                  </div>
+                  <button type="button" class="spollers__title">
+                    Подробнее
+                  </button>
+                </div>
+                <div class="about__card card swiper-slide">
+                  <img
+                    class="card__img"
+                    src="@img/slide_about.jpg"
+                    alt="Кризисная терапия"
+                  />
+                  <h4 class="card__title">
+                    2. Кризисная терапия и стабилизация состояния
+                  </h4>
+                  <div class="card__desc">
+                    С целью лечения острого состояния, а также восстановления
+                    работы органов и систем организма,- для каждого пациента
+                    разрабатывается
+                  </div>
+                  <button type="button" class="spollers__title">
+                    Подробнее
+                  </button>
+                </div>
+                <div class="about__card card swiper-slide">
+                  <img
+                    class="card__img"
+                    src="@img/slide_about.jpg"
+                    alt="Кризисная терапия"
+                  />
+                  <h4 class="card__title">
+                    3. Кризисная терапия и стабилизация состояния
+                  </h4>
+                  <div class="card__desc">
+                    С целью лечения острого состояния, а также восстановления
+                    работы органов и систем организма,- для каждого пациента
+                    разрабатывается
+                  </div>
+                  <button type="button" class="spollers__title">
+                    Подробнее
+                  </button>
+                </div>
+                <div class="about__card card swiper-slide">
+                  <img
+                    class="card__img"
+                    src="@img/slide_about.jpg"
+                    alt="Кризисная терапия"
+                  />
+                  <h4 class="card__title">
+                    4. Кризисная терапия и стабилизация состояния
+                  </h4>
+                  <div class="card__desc">
+                    С целью лечения острого состояния, а также восстановления
+                    работы органов и систем организма,- для каждого пациента
+                    разрабатывается
+                  </div>
+                  <button type="button" class="spollers__title">
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+              <!-- Если нужна пагинация -->
+              <!-- Если нужна навигация (влево/вправо) -->
+              <button type="button" class="swiper-button-prev">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#svg-arrow"></use>
+                </svg>
+              </button>
+              <button type="button" class="swiper-button-next">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#svg-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="two">
+          <div class="about__cards">
+            <!-- Оболочка слайдера -->
+            <div class="about__slider">
+              <!-- Двигающееся часть слайдера -->
+              <div class="about__wrapper">
+                <!-- Слайд -->
+                <div class="about__card card swiper-slide">
+                  <img
+                    class="card__img"
+                    src="@img/slide_about.jpg"
+                    alt="Кризисная терапия"
+                  />
+                  <h4 class="card__title">
+                    1. Кризисная терапия и стабилизация состояния
+                  </h4>
+                  <div class="card__desc">
+                    С целью лечения острого состояния, а также восстановления
+                    работы органов и систем организма,- для каждого пациента
+                    разрабатывается
+                  </div>
+                  <button type="button" class="spollers__title">
+                    Подробнее
+                  </button>
+                </div>
+                <div class="about__card card swiper-slide">
+                  <img
+                    class="card__img"
+                    src="@img/slide_about.jpg"
+                    alt="Кризисная терапия"
+                  />
+                  <h4 class="card__title">
+                    2. Кризисная терапия и стабилизация состояния
+                  </h4>
+                  <div class="card__desc">
+                    С целью лечения острого состояния, а также восстановления
+                    работы органов и систем организма,- для каждого пациента
+                    разрабатывается
+                  </div>
+                  <button type="button" class="spollers__title">
+                    Подробнее
+                  </button>
+                </div>
+                <div class="about__card card swiper-slide">
+                  <img
+                    class="card__img"
+                    src="@img/slide_about.jpg"
+                    alt="Кризисная терапия"
+                  />
+                  <h4 class="card__title">
+                    3. Кризисная терапия и стабилизация состояния
+                  </h4>
+                  <div class="card__desc">
+                    С целью лечения острого состояния, а также восстановления
+                    работы органов и систем организма,- для каждого пациента
+                    разрабатывается
+                  </div>
+                  <button type="button" class="spollers__title">
+                    Подробнее
+                  </button>
+                </div>
+                <div class="about__card card swiper-slide">
+                  <img
+                    class="card__img"
+                    src="@img/slide_about.jpg"
+                    alt="Кризисная терапия"
+                  />
+                  <h4 class="card__title">
+                    4. Кризисная терапия и стабилизация состояния
+                  </h4>
+                  <div class="card__desc">
+                    С целью лечения острого состояния, а также восстановления
+                    работы органов и систем организма,- для каждого пациента
+                    разрабатывается
+                  </div>
+                  <button type="button" class="spollers__title">
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+              <!-- Если нужна пагинация -->
+              <!-- Если нужна навигация (влево/вправо) -->
+              <button type="button" class="swiper-button-prev">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#svg-arrow"></use>
+                </svg>
+              </button>
+              <button type="button" class="swiper-button-next">
+                <svg>
+                  <use xlink:href="@img/icons/icons.svg#svg-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="stages">
+    <div class="stages__container">
+      <h3 class="stages__title-left section__title-left">ЭТАПЫ ЛЕЧЕНИЯ</h3>
+      <div class="stages__text">
+        <b>Программа лечени наркозависимых</b> для каждого пациента
+        составляеться индивидуально.Учытываються сроки употтребления, вид
+        употребляемых веществ, физичиское и психологическое стояние здоровья,
+        психотип зависимого человека, а так же степень мотивации на лечение.
+        Данные факторы формируют <b>психологический портрет пациента</b>, сходя
+        из которого мы рекомендуем оптимальный срок реабилитации.
+      </div>
+      <div data-tabs data-tabs-animate="500" class="stages__body tabs">
+        <ul data-tabs-titles class="tabs__navigation">
+          <li>
+            <button type="button" class="tabs__title">
+              01. Предварительная коммуникация
+            </button>
+          </li>
+          <li>
+            <button type="button" class="tabs__title">
+              02. Сбор информации и первичная консультация
+            </button>
+          </li>
+          <li>
+            <button type="button" class="tabs__title">
+              03. Первичный консилиум
+            </button>
+          </li>
+          <li>
+            <button type="button" class="tabs__title">
+              04. Погружение в программу лечения
+            </button>
+          </li>
+          <li>
+            <button type="button" class="tabs__title">
+              05. Научный консилиум
+            </button>
+          </li>
+          <li>
+            <button type="button" class="tabs__title">
+              06. Психо-образовательная работа
+            </button>
+          </li>
+          <li>
+            <button type="button" class="tabs__title">
+              07. Коррекция навыков и копинг-стратегий
+            </button>
+          </li>
+          <li>
+            <button type="button" class="tabs__title">
+              08. Предвыписной этап
+            </button>
+          </li>
+          <li>
+            <button type="button" class="tabs__title">
+              09. Амбулаторная программа
+            </button>
+          </li>
+          <li>
+            <button type="button" class="tabs__title">
+              10. Постреабилитационная поддержка
+            </button>
+          </li>
+        </ul>
+        <div data-tabs-body class="tabs__content">
+          <div class="tabs__body">
+            <h5 class="tabs__title">1 Этап</h5>
+            <h5 class="tabs__subtitle">Предварительная коммуникация</h5>
+            <span
+              >Бесплатный звонок в клинику с получением ответов на интересующие
+              вопросы от врача и психолога. Обсуждаются особенности начала
+              лечения. Может быть проведена видеоэкскурсия. При необходимости,
+              возможен выезд специалистов по мотивационной работе, которые
+              помогут пациенту принять решение о госпитализации.
+            </span>
+          </div>
+          <div class="tabs__body">
+            <h5 class="tabs__title">2 Этап</h5>
+            <h5 class="tabs__subtitle">Сбор информации и первичная консультация</h5>
+            <span
+              >Бесплатный звонок в клинику с получением ответов на интересующие
+              вопросы от врача и психолога. Обсуждаются особенности начала
+              лечения. Может быть проведена видеоэкскурсия. При необходимости,
+              возможен выезд специалистов по мотивационной работе, которые
+              помогут пациенту принять решение о госпитализации.
+            </span>
+          </div>
+          <div class="tabs__body">
+            <h5 class="tabs__title">3 Этап</h5>
+            <h5 class="tabs__subtitle">Первичный консилиум</h5>
+            <span
+              >Бесплатный звонок в клинику с получением ответов на интересующие
+              вопросы от врача и психолога. Обсуждаются особенности начала
+              лечения. Может быть проведена видеоэкскурсия. При необходимости,
+              возможен выезд специалистов по мотивационной работе, которые
+              помогут пациенту принять решение о госпитализации.
+            </span>
+          </div>
+          <div class="tabs__body">
+            <h5 class="tabs__title">4 Этап</h5>
+            <h5 class="tabs__subtitle">Погружение в программу лечения</h5>
+            <span
+              >Бесплатный звонок в клинику с получением ответов на интересующие
+              вопросы от врача и психолога. Обсуждаются особенности начала
+              лечения. Может быть проведена видеоэкскурсия. При необходимости,
+              возможен выезд специалистов по мотивационной работе, которые
+              помогут пациенту принять решение о госпитализации.
+            </span>
+          </div>
+          <div class="tabs__body">
+            <h5 class="tabs__title">5 Этап</h5>
+            <h5 class="tabs__subtitle">Научный консилиум</h5>
+            <span
+              >Бесплатный звонок в клинику с получением ответов на интересующие
+              вопросы от врача и психолога. Обсуждаются особенности начала
+              лечения. Может быть проведена видеоэкскурсия. При необходимости,
+              возможен выезд специалистов по мотивационной работе, которые
+              помогут пациенту принять решение о госпитализации.
+            </span>
+          </div>
+          <div class="tabs__body">
+            <h5 class="tabs__title">6 Этап</h5>
+            <h5 class="tabs__subtitle">Психо-образовательная работа</h5>
+            <span
+              >Бесплатный звонок в клинику с получением ответов на интересующие
+              вопросы от врача и психолога. Обсуждаются особенности начала
+              лечения. Может быть проведена видеоэкскурсия. При необходимости,
+              возможен выезд специалистов по мотивационной работе, которые
+              помогут пациенту принять решение о госпитализации.
+            </span>
+          </div>
+          <div class="tabs__body">
+            <h5 class="tabs__title">7 Этап</h5>
+            <h5 class="tabs__subtitle">Коррекция навыков и копинг-стратегий</h5>
+            <span
+              >Бесплатный звонок в клинику с получением ответов на интересующие
+              вопросы от врача и психолога. Обсуждаются особенности начала
+              лечения. Может быть проведена видеоэкскурсия. При необходимости,
+              возможен выезд специалистов по мотивационной работе, которые
+              помогут пациенту принять решение о госпитализации.
+            </span>
+          </div>
+          <div class="tabs__body">
+            <h5 class="tabs__title">8 Этап</h5>
+            <h5 class="tabs__subtitle">Предвыписной этап</h5>
+            <span
+              >Бесплатный звонок в клинику с получением ответов на интересующие
+              вопросы от врача и психолога. Обсуждаются особенности начала
+              лечения. Может быть проведена видеоэкскурсия. При необходимости,
+              возможен выезд специалистов по мотивационной работе, которые
+              помогут пациенту принять решение о госпитализации.
+            </span>
+          </div>
+          <div class="tabs__body">
+            <h5 class="tabs__title">9 Этап</h5>
+            <h5 class="tabs__subtitle">Амбулаторная программа</h5>
+            <span
+              >Бесплатный звонок в клинику с получением ответов на интересующие
+              вопросы от врача и психолога. Обсуждаются особенности начала
+              лечения. Может быть проведена видеоэкскурсия. При необходимости,
+              возможен выезд специалистов по мотивационной работе, которые
+              помогут пациенту принять решение о госпитализации.
+            </span>
+          </div>
+          <div class="tabs__body">
+            <h5 class="tabs__title">10 Этап</h5>
+            <h5 class="tabs__subtitle">Постреабилитационная поддержка</h5>
+            <span
+              >Бесплатный звонок в клинику с получением ответов на интересующие
+              вопросы от врача и психолога. Обсуждаются особенности начала
+              лечения. Может быть проведена видеоэкскурсия. При необходимости,
+              возможен выезд специалистов по мотивационной работе, которые
+              помогут пациенту принять решение о госпитализации.
+            </span>
+          </div>
+
+
         </div>
       </div>
     </div>

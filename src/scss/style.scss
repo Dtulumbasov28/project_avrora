@@ -153,8 +153,10 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
-@import "fixed-menu";
-@import "socials";
-@import "burger";
-@import "main-section";
-@import "main-slider";
+@import "./blocks/fixed-menu";
+@import "./blocks/socials";
+@import "./blocks/burger";
+@import "./blocks/main-section";
+@import "./blocks/main-slider";
+@import "./blocks/about";
+@import "./blocks/stages";

@@ -17,7 +17,7 @@ EffectFade, Lazy, Manipulation
 
 // Стили Swiper
 // Базовые стили
-// import "../../scss/base/swiper.scss";
+import "../../scss/base/swiper.scss";
 // Полный набор стилей из scss/libs/swiper.scss
 import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
@@ -34,16 +34,13 @@ function initSliders() {
       // Указываем класс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [Navigation, Pagination, Autoplay, EffectFade   ],
+      modules: [Navigation, Pagination, Autoplay,  EffectFade ],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
       spaceBetween: 0,
       autoHeight: true,
       speed: 800,
-      autoplay: {
-        delay: 3000,
-      },
       loop: true,
       effect: "fade",
       autoplay: {
@@ -72,16 +69,16 @@ function initSliders() {
 				el: '.swiper-scrollbar',
 				draggable: true,
 			},
-
-			// Кнопки "влево/вправо"
-			navigation: {
-			  prevEl: ".swiper-button-prev",
-			  nextEl: ".swiper-button-next",
-			},
+      
 			*/
-
+			// Кнопки "влево/вправо"
+      navigation: {
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+      },
+      
       // Пагинация
-
+      
       pagination: {
         el: ".swiper-pagination",
         clickable: true,

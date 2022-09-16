@@ -1,4 +1,58 @@
 // Заголовки, общие БЄМ блоки и проче...
 .page {
-  @include adaptiveValue("margin-left", 430, 240, 1920, 991.98, 2);
+  @include adaptiveValue("margin-left", 430, 300, 1920, 991.98, 2);
+  margin-bottom: 200px;
+}
+
+
+.section {
+  // .section__title-left
+
+  &__title-left {
+    width: 13%;
+    position: absolute;
+
+    font-family: $fontFamilyPlayfair;
+    font-weight: 700;
+    font-size: 24px;
+    color: $mainColorBlue;
+    line-height: math.div(20, 24);
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 8px;
+      left: -20px;
+      background-color: $mainColorRed;
+      border-radius: 50px;
+    }
+  }
+
+  // .section__decor
+
+  &__decor {
+    width: 200px;
+    height: 80px;
+    margin-bottom: 40px;
+  }
+
+  // .section__title
+
+  &__title {
+    font-size: 28px;
+    text-transform: uppercase;
+  }
+
+  // .section__subtitle
+
+  &__subtitle {
+    @include adaptiveValue("padding-right", 400, 0, 1920, 991.98, 1);
+    @include adaptiveValue("padding-left", 400, 0, 1920, 991.98, 1);
+
+    font-family: $fontFamilyPlayfair;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: math.div(33, 28);
+  }
 }
