@@ -1,0 +1,91 @@
+.team {
+  // .team__container
+
+  &__container {
+    position: relative;
+    margin-bottom: 156px;
+  }
+
+  // .team__title-left
+
+  &__title-left {
+    top: -110px;
+  }
+
+  // .team__cards
+
+  &__cards {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  // .team__card
+
+  &__card {
+    width: 239px;
+
+    &:hover {
+      & .card__text {
+        font-weight: 700;
+      }
+      & .card__desc {
+        font-weight: 700;
+      }
+    }
+  }
+}
+.section {
+  // .section__title-left
+
+  &__title-left {
+  }
+
+  // .section__decor
+
+  &__decor {
+  }
+}
+.card {
+  // .card__image
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & img {
+      z-index: 2;
+    }
+  }
+
+  // .card__icon-team
+
+  &__icon-team {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+  }
+
+  // .card__text
+
+  &__text {
+    text-align: center;
+    font-weight: 500;
+    font-family: $fontFamilyPlayfair;
+    margin-bottom: 10px;
+  }
+
+  // .card__desc
+
+  &__desc {
+    text-align: center;
+    padding: 0px 26px;
+  }
+}
+.benefits {
+  // .benefits__decor
+
+  &__decor {
+  }
+}

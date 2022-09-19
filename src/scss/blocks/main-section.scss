@@ -57,6 +57,58 @@
   // .main__spollers
 
   &__spollers {
+
+    .spollers {
+      // .spollers__item
+    
+      &__item {
+        @include adaptiveValue("font-size", 14, 12, 991.98, 319.98, 1);
+        line-height: math.div(13, 14);
+      }
+    
+      // .spollers__desc
+    
+      &__desc {
+        font-style: italic;
+      }
+    
+      // .spollers__text
+    
+      &__text {
+        font-family: $fontFamilyPlayfair;
+        color: $mainColorBlue;
+        font-weight: 700;
+      }
+    
+      // .spollers__title
+    
+      &__title {
+        position: relative;
+    
+        font-weight: 200;
+    
+        &::after {
+          content: url(@img/decor-more.svg);
+          position: absolute;
+          right: 0;
+          top: 1px;
+        }
+      }
+    
+      // .spollers__body
+    
+      &__body {
+      }
+    
+      // .spollers__body-title
+    
+      &__body-title {
+        font-family: $fontFamilyPlayfair;
+        color: $mainColorBlue;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+    }
   }
 }
 .swiper {
@@ -158,54 +210,4 @@
 }
 .button {
 }
-.spollers {
-  // .spollers__item
 
-  &__item {
-    @include adaptiveValue("font-size", 14, 12, 991.98, 319.98, 1);
-    line-height: math.div(13, 14);
-  }
-
-  // .spollers__desc
-
-  &__desc {
-    font-style: italic;
-  }
-
-  // .spollers__text
-
-  &__text {
-    font-family: $fontFamilyPlayfair;
-    color: $mainColorBlue;
-    font-weight: 700;
-  }
-
-  // .spollers__title
-
-  &__title {
-    position: relative;
-
-    font-weight: 200;
-
-    &::after {
-      content: url(@img/decor-more.svg);
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-  }
-
-  // .spollers__body
-
-  &__body {
-  }
-
-  // .spollers__body-title
-
-  &__body-title {
-    font-family: $fontFamilyPlayfair;
-    color: $mainColorBlue;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
-}

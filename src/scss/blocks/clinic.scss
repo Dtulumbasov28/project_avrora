@@ -1,0 +1,44 @@
+.clinic {
+  // .clinic__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 164px;
+  }
+
+  // .clinic__title
+
+  &__title {
+    margin-bottom: 86px;
+  }
+
+  // .clinic__photo
+
+  &__photo {
+    display: flex;
+    gap: 11px;
+  }
+
+  // .clinic__slide
+
+  &__slide {
+  }
+
+  // .clinic__img
+
+  &__img {
+  }
+}
+.section {
+  // .section__decor
+
+  &__decor {
+  }
+
+  // .section__title
+
+  &__title {
+  }
+}

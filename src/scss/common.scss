@@ -4,19 +4,19 @@
   margin-bottom: 200px;
 }
 
-
 .section {
   // .section__title-left
 
   &__title-left {
     width: 13%;
     position: absolute;
+    left: 20px;
 
     font-family: $fontFamilyPlayfair;
     font-weight: 700;
     font-size: 24px;
     color: $mainColorBlue;
-    line-height: math.div(20, 24);
+    line-height: math.div(30, 24);
 
     &::before {
       content: "";
@@ -32,6 +32,8 @@
   // .section__decor
 
   &__decor {
+    // margin-right: auto;
+    // margin-left: auto;
     width: 200px;
     height: 80px;
     margin-bottom: 40px;
@@ -40,6 +42,11 @@
   // .section__title
 
   &__title {
+    width: 60%;
+    text-align: center;
+
+    font-family: $fontFamilyPlayfair;
+    font-weight: 700;
     font-size: 28px;
     text-transform: uppercase;
   }
@@ -47,8 +54,8 @@
   // .section__subtitle
 
   &__subtitle {
-    @include adaptiveValue("padding-right", 400, 0, 1920, 991.98, 1);
-    @include adaptiveValue("padding-left", 400, 0, 1920, 991.98, 1);
+    width: 60%;
+    text-align: center;
 
     font-family: $fontFamilyPlayfair;
     font-weight: 700;

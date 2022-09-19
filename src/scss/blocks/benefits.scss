@@ -1,0 +1,138 @@
+.benefits {
+  // .benefits__container
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 23px;
+    margin-bottom: 268px;
+  }
+
+  // .benefits__decor
+
+  &__decor {
+    margin-bottom: 0;
+  }
+
+  // .benefits__title
+
+  &__title {
+  }
+
+  // .benefits__subtitle
+
+  &__subtitle {
+  }
+
+  // .benefits__body
+
+  &__body {
+    width: 80%;
+  }
+
+  // .benefits__cards
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  // .benefits__card
+
+  &__card {
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 322px;
+    width: calc(100% / 2);
+    padding: 16px 12px;
+  }
+
+  // .benefits__request
+
+  &__request {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 68px;
+    height: 200px;
+    width: 80%;
+    background: radial-gradient(
+      74.45% 238.31% at 66.48% 50%,
+      rgba(0, 114, 187, 0.77) 0%,
+      rgba(0, 114, 187, 0.77) 100%
+    );
+
+    box-shadow: 0px 39px 36px -31px rgba(138, 124, 99, 0.15);
+    border-radius: 30px;
+  }
+
+  // .benefits__question
+
+  &__question {
+  }
+
+  // .benefits__call
+
+  &__call {
+  }
+}
+
+.card {
+  // .card__block
+
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  // .card__icon
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  // .card__title
+
+  &__title {
+    font-family: $fontFamilyPlayfair;
+    font-size: 20px;
+  }
+
+  // .card__text
+
+  &__text {
+    font-weight: 300;
+  }
+}
+.button {
+  // .button__question
+
+  &__question {
+    font-family: $fontFamilyPlayfair;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    padding: 14px 20px;
+    line-height: 1;
+    border: 3px solid #ffffff;
+  }
+
+  // .button__call
+
+  &__call {
+    font-family: $fontFamilyPlayfair;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    padding: 14px 20px;
+    line-height: 1;
+    border: 3px solid #ffffff;
+    background-color: $mainColorBrown;
+  }
+}

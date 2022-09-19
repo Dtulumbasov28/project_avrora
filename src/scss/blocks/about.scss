@@ -127,15 +127,18 @@
   // .about__wrapper
 
   &__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: auto;
+    display: flex;
     justify-content: center;
+    flex-wrap: nowrap;
     gap: 12px;
   }
 
   // .about__card
 
   &__card {
+    width: auto;
+    flex-direction: row;
   }
 }
 .swiper {
@@ -148,7 +151,7 @@
   flex-direction: column;
   align-items: center;
   gap: 14px;
-  padding: 14px 20px;
+  padding: 14px 30px;
 
   background: #ffffff;
   border: 2px solid $mainColorBrown;
@@ -156,7 +159,20 @@
   line-height: math.div(17, 14);
 
   &:hover {
+    transition: 0.5s ;
+
     border: 2px solid $mainColorBlue;
+
+    & .card__title {
+      transition: 0.5s ;
+
+      color: $mainColorBlue;
+    }
+    & .card__title-body {
+      transition: 0.5s ;
+
+      font-weight: 700;
+    }
   }
   // .card__img
 
@@ -176,6 +192,26 @@
 
   &__desc {
     font-weight: 300;
+  }
+
+  // .card__body
+
+  &__body {
+    border-radius: 30px;
+  }
+
+  // .card__title-body
+  &__title-body {
+    position: relative;
+    font-size: 14px;
+    font-weight: 200;
+
+    &::after {
+      content: url(@img/decor-more.svg);
+      position: absolute;
+      left: 90px;
+      padding: 0px 0px 0px 15px;
+    }
   }
 }
 .swiper-slide {

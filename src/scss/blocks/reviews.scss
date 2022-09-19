@@ -1,0 +1,102 @@
+.reviews {
+  // .reviews__container
+
+  &__container {display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 44px;
+  }
+
+  // .reviews__title-left
+
+  &__title-left {
+    top: -80px;
+  }
+
+  // .reviews__body
+
+  &__body {
+   
+    width: 810px;
+
+  }
+
+  // .reviews__person
+
+  &__person {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  // .reviews__head
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-bottom: 8px;
+
+    border-bottom: 4px solid #57585a;
+  }
+
+  // .reviews__img
+
+  &__img {
+  }
+
+  // .reviews__avatar
+
+  &__avatar {
+  }
+
+  // .reviews__info
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .reviews__name
+
+  &__name {
+    font-family: $fontFamilyPlayfair;
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+
+  // .reviews__desc
+
+  &__desc {
+    font-weight: 200;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  // .reviews__original
+
+  &__original {
+    font-size: 10px;
+    font-weight: 600;
+    color: $mainColorBrown;
+
+    display: flex;
+  }
+
+  // .reviews__text
+
+  &__text {
+    font-size: 15px;
+    font-weight: 200;
+    line-height: math.div(20, 15);
+
+    column-count: 2;
+    column-gap: 20px;
+  }
+}
+.section {
+  // .section__title-left
+
+  &__title-left {
+  }
+}
