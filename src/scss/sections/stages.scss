@@ -1,6 +1,7 @@
 .stages {
   position: relative;
   background-color: #f3f3f3;
+  padding-top: 78px;
   padding-bottom: 145px;
 
   // .stages__container
@@ -8,11 +9,8 @@
   &__container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    @include adaptiveValue("margin-left", 340, 180, 2300, 2000, 1);
+    align-items: center;
   }
-
- 
 
   // .stages__text
 
@@ -20,6 +18,7 @@
     position: relative;
     font-weight: 200;
     width: 80%;
+    margin-left: 20px;
     margin-bottom: 65px;
 
     &::after {
@@ -37,6 +36,8 @@
 
   &__body {
     display: flex;
+    justify-content: center;
+    gap: 20px;
     width: 100%;
   }
 }
@@ -67,14 +68,13 @@
     font-size: 24px;
     font-family: $fontFamilyPlayfair;
     font-weight: 700;
-    line-height: math.div(20 , 18);
+    line-height: math.div(20, 18);
     text-align: start;
-
-
+    letter-spacing: 0.7px;
+    transition: color 0.4s;
 
     &:hover {
       color: $mainColorBrown;
-      transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
     }
   }
 
@@ -87,7 +87,7 @@
     background-color: #fff;
     border-radius: 30px;
     padding: 10px 40px 100px 70px;
-    
+
     box-shadow: 0 0 10px rgba(131, 131, 131, 0.5);
   }
 
@@ -95,7 +95,7 @@
 
   &__body {
     & span {
-        line-height: math.div(20 , 16);
+      line-height: math.div(20, 16);
     }
   }
 

@@ -7,7 +7,6 @@
   font-weight: 700;
   z-index: 3;
 
-
   @media (max-width: $tablet) {
     margin: 0;
   }
@@ -166,9 +165,10 @@
     justify-content: space-between;
 
     & a {
+      transition: color .4s;
+
       &:hover {
         color: $mainColorBrown;
-        transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
       }
     }
   }

@@ -1,16 +1,18 @@
 .questions {
   background-color: #f3f3f3;
+  padding-top: 70px;
+  padding-bottom: 150px;
 
   // .questions__container
 
   &__container {
-    padding-top: 236px;
-    padding-bottom: 236px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+	  position: relative;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+
+	  padding-top: 236px;
+	}
 
   // .questions__title-left
 
@@ -23,7 +25,7 @@
 
   &__body {
     display: flex;
-    gap: 18px;
+    gap: 24px;
   }
 
   // .questions__navigation
@@ -57,7 +59,6 @@
   // .questions__content
 
   &__content {
-
     text-align: center;
     padding: 50px 60px;
   }

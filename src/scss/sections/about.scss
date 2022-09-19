@@ -1,18 +1,11 @@
 .about {
   position: relative;
-  margin-top: 126px;
-  margin-bottom: 136px;
+  padding-bottom: 58px;
   // .about__container
 
   &__container {
     display: flex;
     flex-direction: column;
-  }
-
-  // .about__title-left
-
-  &__title-left {
-    top: -35px;
   }
 
   // .about__qualities
@@ -155,25 +148,12 @@
 
   background: #ffffff;
   border: 2px solid $mainColorBrown;
+  transition: border 0.4s;
+
   border-radius: 30px;
   line-height: math.div(17, 14);
 
-  &:hover {
-    transition: 0.5s ;
 
-    border: 2px solid $mainColorBlue;
-
-    & .card__title {
-      transition: 0.5s ;
-
-      color: $mainColorBlue;
-    }
-    & .card__title-body {
-      transition: 0.5s ;
-
-      font-weight: 700;
-    }
-  }
   // .card__img
 
   &__img {
@@ -186,6 +166,7 @@
   &__title {
     font-size: 14px;
     font-weight: 700;
+    transition: color 0.4s;
   }
 
   // .card__desc
@@ -197,7 +178,15 @@
   // .card__body
 
   &__body {
+    padding: 12px 10px;
     border-radius: 30px;
+  }
+  // .card__body-title
+
+  &__body-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
   }
 
   // .card__title-body
@@ -205,6 +194,7 @@
     position: relative;
     font-size: 14px;
     font-weight: 200;
+    transition: font-weight 0.4s;
 
     &::after {
       content: url(@img/decor-more.svg);

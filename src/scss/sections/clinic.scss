@@ -1,11 +1,12 @@
 .clinic {
+  padding-top: 50px;
+  padding-bottom: 80px;
   // .clinic__container
 
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 164px;
   }
 
   // .clinic__title

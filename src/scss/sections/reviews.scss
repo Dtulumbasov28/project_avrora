@@ -1,11 +1,12 @@
 .reviews {
+	padding-top: 80px;
+	padding-bottom: 50px;
   // .reviews__container
 
   &__container {display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-bottom: 44px;
   }
 
   // .reviews__title-left
@@ -80,7 +81,7 @@
     font-weight: 600;
     color: $mainColorBrown;
 
-    display: flex;
+    display: contents;
   }
 
   // .reviews__text

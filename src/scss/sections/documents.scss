@@ -1,9 +1,13 @@
 .documents {
+  background-color: #f3f3f3;
+
+  padding-top: 40px;
+  padding-bottom: 118px;
+
   // .documents__container
 
   &__container {
     position: relative;
-    margin-bottom: 156px;
   }
 
   // .documents__title-left
@@ -22,7 +26,8 @@
 
   // .documents__card
 
-  &__card {        border-radius: 10px;
+  &__card {
+    border-radius: 10px;
 
     position: relative;
 
