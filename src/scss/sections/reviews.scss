@@ -1,9 +1,10 @@
 .reviews {
-	padding-top: 80px;
-	padding-bottom: 50px;
+  padding-top: 80px;
+  padding-bottom: 50px;
   // .reviews__container
 
-  &__container {display: flex;
+  &__container {
+    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -18,9 +19,7 @@
   // .reviews__body
 
   &__body {
-   
     width: 810px;
-
   }
 
   // .reviews__person

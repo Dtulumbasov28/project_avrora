@@ -5,6 +5,8 @@
   // .team__container
 
   &__container {
+    display: flex;
+    justify-content: center;
     position: relative;
     margin-bottom: 156px;
   }
@@ -18,15 +20,13 @@
   // .team__cards
 
   &__cards {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
+    width: 960px;
   }
 
   // .team__card
 
   &__card {
-    width: 239px;
+    width: 240px;
 
     &:hover {
       & .card__text {

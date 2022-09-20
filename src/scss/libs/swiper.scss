@@ -66,29 +66,3 @@
   opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.8);
 }
 
-.swiper-pagination-bullet-active {
-  background: #0072bb;
-  opacity: 1;
-}
-
-.swiper-button-next {
-  transform: rotate(180deg);
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  width: 26px;
-  height: 26px;
-  z-index: 10;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  color: var(--swiper-navigation-color, var(--swiper-theme-color));
-}
-.wrapper-button {
-  position: absolute;
-  top: 740px;
-  right: 100px;
-  display: flex;
-  gap: 10px;
-}

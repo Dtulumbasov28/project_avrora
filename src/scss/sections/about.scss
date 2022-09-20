@@ -107,9 +107,11 @@
   // .about__cards
 
   &__cards {
-    width: 260px;
+    width: 1040px;
+
     position: relative;
-    margin-bottom: rem(13);
+    margin-top: 40px;
+    margin-bottom: 14px;
   }
 
   // .about__slider
@@ -121,20 +123,16 @@
   // .about__wrapper
 
   &__wrapper {
-
   }
 
   // .about__card
 
   &__card {
-    width: 260px;
   }
 }
 .swiper {
 }
-.swiper-wrapper {
-  gap: 30px;
-}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -144,6 +142,7 @@
   background: #fff;
   border: 2px solid $mainColorBrown;
   transition: border 0.4s;
+  width: 260px;
 
   border-radius: 30px;
   line-height: math.div(17, 14);
@@ -206,9 +205,36 @@
   &__title {
   }
 }
-.swiper-button-prev {
+.pagination-bullet-active {
+  background: #0072bb;
+  opacity: 1;
 }
-.swiper-button-next {
+
+.button-next {
+  transform: rotate(180deg);
 }
-.swiper-scrollbar {
+
+.button-next,
+.button-prev {
+  width: 26px;
+  height: 26px;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+.wrapper-button-top {
+  position: absolute;
+  top: 680px;
+  right: 70px;
+  display: flex;
+  gap: 10px;
+}
+.wrapper-button-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 70px;
+  display: flex;
+  gap: 10px;
 }
