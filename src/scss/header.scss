@@ -1,6 +1,6 @@
 //====================================================================================================
 .header {
-  @include adaptiveValue("margin-left", 550, 270, 1920, 991.98, 1);
+  @include adaptiveValue("margin-left", 400, 280, 1920, 991.98, 2);
   @include adaptiveValue("font-size", 16, 14, 1920, 991.98, 1);
   @include adaptiveValue("font-size", 14, 10, 479.98, 349.98, 1);
   position: relative;

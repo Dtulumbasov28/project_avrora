@@ -1,3 +1,27 @@
 //====================================================================================================
+.footer {
+  @include adaptiveValue("margin-left", 400, 280, 1920, 991.98, 2);
+  padding-top: 46px;
+  padding-bottom: 16px;
+
+  // .footer__container
+
+  &__container {
+  }
+
+  // .footer__text
+
+  &__text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    color: $mainColorBrown;
+    font-family: $fontFamilyPlayfair;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: math.div(18, 14);
+  }
+}
 
 //====================================================================================================

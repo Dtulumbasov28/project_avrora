@@ -108,30 +108,26 @@
 
   &__cards {
     width: 260px;
+    position: relative;
     margin-bottom: rem(13);
   }
 
   // .about__slider
 
   &__slider {
-    overflow: visible !important;
+    // overflow: visible !important;
   }
 
   // .about__wrapper
 
   &__wrapper {
-    width: auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    gap: 12px;
+
   }
 
   // .about__card
 
   &__card {
-    width: auto;
-    flex-direction: row;
+    width: 260px;
   }
 }
 .swiper {
@@ -145,14 +141,12 @@
   align-items: center;
   gap: 14px;
   padding: 14px 30px;
-
-  background: #ffffff;
+  background: #fff;
   border: 2px solid $mainColorBrown;
   transition: border 0.4s;
 
   border-radius: 30px;
   line-height: math.div(17, 14);
-
 
   // .card__img
 

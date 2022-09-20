@@ -1,58 +1,75 @@
-.one {
-  .main {
-    // .main__slider
+.main {
+  // .main__slider
 
-    &__slider {
-      position: relative;
-      overflow: hidden;
-      border-radius: 50px;
-      margin-bottom: 22px;
-      @media (max-width: $tablet) {
-        border-radius: 10px;
-      }
-      // .main__wrapper
-
-      &__wrapper {
-      }
-
-      // .main__slide
-
-      &__slide {
-      }
+  &__slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    margin-bottom: 22px;
+    @media (max-width: $tablet) {
+      border-radius: 10px;
     }
-  }
-  .swiper {
-    @include adaptiveValue("width", 989, 300, 1100, 319.98, 1);
-    @include adaptiveValue("height", 600, 160, 991.98, 319.98, 1);
-    
-  
 
-    
+    @include adaptiveValue("width", 989, 300, 1100, 319.98, 1);
+    @include adaptiveValue("height", 480, 160, 991.98, 319.98, 1);
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
     @media (max-width: $tablet) {
       border-radius: 10px !important;
     }
-  }
-  .swiper-wrapper {
-  }
-  .swiper-slide {
-  }
-  .swiper-pagination {
-    @media (max-width: $tablet) {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 12px;
-      top: 60%;
-      right: 16px;
+    // .main__wrapper
+
+    &__wrapper {
+    }
+
+    // .main__slide
+
+    &__slide {
+      & img {
+        width: 989px;
+      }
     }
   }
-  .swiper-autoheight,
-  .swiper-autoheight .swiper-slide {
-    @media (max-width: $mobile) {
-      height: 300px !important;
-    }
-    @media (max-width: $mobileSmall) {
-      height: 180px !important;
-    }
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-pagination {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    top: 60%;
+    left: auto !important;
+    right: 20px !important;
   }
+}
+.swiper-autoheight,
+.swiper-autoheight .swiper-slide {
+  @media (max-width: $mobile) {
+    height: 300px !important;
+  }
+  @media (max-width: $mobileSmall) {
+    height: 180px !important;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: #fff !important;
+  opacity: 0.8 !important;
+}
+.swiper-pagination-bullet-active {
+  background: $mainColorBlue !important;
+  opacity: 1 !important;
 }

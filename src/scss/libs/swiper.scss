@@ -1,35 +1,94 @@
-.swiper1 {
-	overflow: hidden;
+.swiper {
+  overflow: hidden;
 }
-.swiper1-wrapper {
-	width: 100%;
-	height: 100%;
-	box-sizing: content-box;
-	display: flex;
-	position: relative;
+.swiper2 {
+  overflow: hidden;
 }
-.swiper1-vertical {
-	.swiper1-wrapper {
-		flex-direction: column;
-	}
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  display: flex;
+  position: relative;
 }
-.swiper1-autoheight {
-	.swiper1-wrapper {
-		align-items: flex-start;
-	}
+.swiper-vertical {
+  .swiper-wrapper {
+    flex-direction: column;
+  }
 }
-.swiper1-initialized {
-	.swiper1-slide {
-		flex-shrink: 0;
-		// transition-property: transform;
-	}
+.swiper-autoheight {
+  .swiper-wrapper {
+    align-items: flex-start;
+  }
 }
-.swiper1-android {
-	.swiper1-slide,
-	.swiper1-wrapper {
-		transform: translate3d(0px, 0, 0);
-	}
+.swiper-initialized {
+  .swiper-slide {
+    flex-shrink: 0;
+    // transition-property: transform;
+  }
 }
-.swiper1-button-lock {
-	display: none !important;
+.swiper-android {
+  .swiper-slide,
+  .swiper-wrapper {
+    transform: translate3d(0px, 0, 0);
+  }
+}
+.swiper-button-lock {
+  display: none;
+}
+
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  transition: 0.3s opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 2;
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 10px;
+  width: 100%;
+}
+.swiper-pagination-bullet {
+  width: var(
+    --swiper-pagination-bullet-width,
+    var(--swiper-pagination-bullet-size, 12px)
+  );
+  height: var(
+    --swiper-pagination-bullet-height,
+    var(--swiper-pagination-bullet-size, 12px)
+  );
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--swiper-pagination-bullet-inactive-color, #fff);
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.8);
+}
+
+.swiper-pagination-bullet-active {
+  background: #0072bb;
+  opacity: 1;
+}
+
+.swiper-button-next {
+  transform: rotate(180deg);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 26px;
+  height: 26px;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+}
+.wrapper-button {
+  position: absolute;
+  top: 740px;
+  right: 100px;
+  display: flex;
+  gap: 10px;
 }
