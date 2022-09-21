@@ -89,15 +89,6 @@
 
     border-radius: 20px;
     transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
-
-    &:hover {
-      box-shadow: none;
-      border: 2px solid #fff;
-      letter-spacing: 1px;
-
-      background-color: $mainColorBrown;
-      color: #fff;
-    }
   }
 
   // .menu-header__top
@@ -117,9 +108,6 @@
   // .menu-header__contacts
 
   &__contacts {
-    @media (max-width: $tablet) {
-      display: none;
-    }
   }
 
   // .menu-header__button
@@ -150,11 +138,19 @@
   &__icon {
     width: 12px;
     height: 12px;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
   // .contacts__number
 
   &__number {
+    
+    @media (max-width: $tablet) {
+      font-family: $fontFamilyJost;
+    }
   }
 
   // .contacts__messengers
@@ -165,7 +161,7 @@
     justify-content: space-between;
 
     & a {
-      transition: color .4s;
+      transition: color 0.4s;
 
       &:hover {
         color: $mainColorBrown;
@@ -204,12 +200,6 @@
     white-space: nowrap;
 
     @media (max-width: $tablet) {
-      box-shadow: none;
-      &:hover {
-        border-color: $mainColorBlue;
-      }
-    }
-    @media (max-width: $mobileSmall) {
       display: none;
     }
   }
@@ -220,8 +210,8 @@
     display: none;
     border: none;
     box-shadow: none;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: $mainColorBrown;
 
@@ -230,12 +220,7 @@
       height: 100%;
     }
 
-    &:hover {
-      border: none;
-      background-color: $mainColorBlue;
-    }
-
-    @media (max-width: $mobileSmall) {
+    @media (max-width: $tablet) {
       display: block;
     }
   }

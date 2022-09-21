@@ -6,7 +6,9 @@
 
   &__container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     position: relative;
     margin-bottom: 156px;
   }
@@ -20,7 +22,16 @@
   // .team__cards
 
   &__cards {
-    width: 960px;
+    width: 1000px;
+    @media (max-width: 1299px) {
+      width: 750px;
+    }
+    @media (max-width: 759px) {
+      width: 500px;
+    }
+    @media (max-width: $mobileSmall) {
+      width: 250px;
+    }
   }
 
   // .team__card
@@ -54,7 +65,7 @@
 
   &__image {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 
     & img {
@@ -66,8 +77,8 @@
 
   &__icon-team {
     position: absolute;
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
   }
 
   // .card__text
@@ -82,7 +93,7 @@
   // .card__desc
 
   &__desc {
-    text-align: center;
+    text-align: center !important;
     padding: 0px 26px;
   }
 }
@@ -90,5 +101,33 @@
   // .benefits__decor
 
   &__decor {
+  }
+}
+.wrapper-button-team {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-right: 100px;
+  margin-bottom: 22px;
+}
+.team-button-next {
+  & svg {
+    &:hover {
+      border-radius: 10px;
+      background: #f3f3f3;
+      box-shadow: 10px 10px 20px 0px #00000017;
+      box-shadow: -10px -10px 20px 0px #ffffff;
+    }
+  }
+}
+.team-button-prev {
+  & svg {
+    &:hover {
+      border-radius: 10px;
+      background: #f3f3f3;
+      box-shadow: 10px 10px 20px 0px #00000017;
+      box-shadow: -10px -10px 20px 0px #ffffff;
+    }
   }
 }

@@ -1,9 +1,8 @@
 // Заголовки, общие БЄМ блоки и проче...
-[class*="__container"] {
-	position: relative;
-	margin-left: 20px;
- }
-
+// [class*="__container"] {
+//   position: relative;
+//   margin-left: 20px;
+// }
 
 .page {
   @include adaptiveValue("margin-left", 400, 280, 1920, 991.98, 2);
@@ -13,21 +12,24 @@
   // .section__title-left
 
   &__title-left {
-    width: 13%;
-    position: absolute;
-    left: 20px;
+    @include adaptiveValue("font-size", 24, 14, 1920, 319.98, 1);
 
+    width: 170px;
+    position: absolute;
+    left: 30px;
+
+    text-transform: uppercase;
     font-family: $fontFamilyPlayfair;
     font-weight: 700;
-    font-size: 24px;
     color: $mainColorBlue;
     line-height: math.div(30, 24);
 
     &::before {
+      @include adaptiveValue("width", 8, 4, 1920, 479.98, 1);
+
       content: "";
       position: absolute;
       height: 100%;
-      width: 8px;
       left: -20px;
       background-color: $mainColorRed;
       border-radius: 50px;
@@ -39,32 +41,43 @@
   &__decor {
     // margin-right: auto;
     // margin-left: auto;
-    width: 200px;
-    height: 80px;
+    @include adaptiveValue("width", 200, 100, 1920, 479.98, 1);
+    @include adaptiveValue("height", 80, 40, 1920, 479.98, 1);
+
     margin-bottom: 40px;
   }
 
   // .section__title
 
   &__title {
-    width: 60%;
+    @include adaptiveValue("font-size", 28, 16, 1920, 319.98, 1);
+    @include adaptiveValue("width", 800, 300, 1920, 319.98, 1);
+
     text-align: center;
 
     font-family: $fontFamilyPlayfair;
     font-weight: 700;
-    font-size: 28px;
     text-transform: uppercase;
   }
 
   // .section__subtitle
 
   &__subtitle {
-    width: 60%;
+    @include adaptiveValue("font-size", 28, 14, 1920, 319.98, 1);
+    @include adaptiveValue("width", 800, 300, 1920, 319.98, 1);
+
     text-align: center;
 
     font-family: $fontFamilyPlayfair;
     font-weight: 700;
-    font-size: 28px;
     line-height: math.div(33, 28);
   }
+}
+
+svg {
+  height: 100%;
+
+
+  width: 100%;
+
 }

@@ -38,8 +38,8 @@
   &__desc {
     @include adaptiveValue("padding-right", 200, 0, 1920, 991.98, 1);
     @include adaptiveValue("padding-left", 200, 0, 1920, 991.98, 1);
+    @include adaptiveValue("font-size", 20, 12, 1920, 319.98, 1);
 
-    font-size: 20px;
     margin-bottom: 24px;
   }
 }
@@ -50,7 +50,7 @@
   align-items: center;
   flex-direction: column;
   gap: 40px;
-  margin-top: rem(35);
+  margin-top: 50px;
   margin-bottom: rem(80);
 
   &::after {
@@ -65,8 +65,9 @@
   // .qualities__title
 
   &__title {
-    width: 50%;
-    font-size: 28px;
+    @include adaptiveValue("font-size", 28, 16, 1920, 319.98, 1);
+    @include adaptiveValue("width", 1000, 280, 1920, 319.98, 1);
+    text-align: center;
     font-family: $fontFamilyPlayfair;
     font-weight: 700;
     line-height: math.div(33, 28);
@@ -75,6 +76,8 @@
   // .qualities__list
 
   &__list {
+    @include adaptiveValue("font-size", 16, 14, 1920, 319.98, 1);
+
     font-weight: 700;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -96,7 +99,8 @@
   // .qualities__decor
 
   &__decor {
-    width: 40px;
+    min-width: 40px;
+    max-width: 40px;
     height: 20px;
   }
 }
@@ -107,11 +111,19 @@
   // .about__cards
 
   &__cards {
-    width: 1040px;
-
+    width: 1000px;
     position: relative;
-    margin-top: 40px;
     margin-bottom: 14px;
+
+    @media (max-width: 1360px) {
+      width: 750px;
+    }
+    @media (max-width: 1060px) {
+      width: 500px;
+    }
+    @media (max-width: 578px) {
+      width: 250px;
+    }
   }
 
   // .about__slider
@@ -138,7 +150,7 @@
   flex-direction: column;
   align-items: center;
   gap: 14px;
-  padding: 14px 30px;
+  padding: 14px 26px;
   background: #fff;
   border: 2px solid $mainColorBrown;
   transition: border 0.4s;
@@ -157,7 +169,10 @@
   // .card__title
 
   &__title {
-    font-size: 14px;
+    text-align: left;
+
+    font-family: $fontFamilyJost !important;
+    font-size: 14px !important;
     font-weight: 700;
     transition: color 0.4s;
   }
@@ -165,6 +180,9 @@
   // .card__desc
 
   &__desc {
+    padding: 0 !important;
+    text-align: left !important;
+
     font-weight: 300;
   }
 
@@ -196,6 +214,11 @@
       padding: 0px 0px 0px 15px;
     }
   }
+
+  //.card__button
+  &__button {
+    text-align: left !important;
+  }
 }
 .swiper-slide {
 }
@@ -222,19 +245,28 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  color: var(--swiper-navigation-color, var(--swiper-theme-color));
 }
 .wrapper-button-top {
-  position: absolute;
-  top: 680px;
-  right: 70px;
-  display: flex;
-  gap: 10px;
+  display: none;
+
+  @media (max-width: 1360px) {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-right: 100px;
+    margin-bottom: 22px;
+  }
 }
 .wrapper-button-bottom {
-  position: absolute;
-  bottom: 0;
-  right: 70px;
-  display: flex;
-  gap: 10px;
+  display: none;
+
+  @media (max-width: 1360px) {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-right: 100px;
+    margin-bottom: 22px;
+  }
 }

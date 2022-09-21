@@ -1,65 +1,78 @@
 .benefits {
-	padding-bottom: 106px;
+  padding-bottom: 106px;
   // .benefits__container
 
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 23px;
+    gap: 10px;
   }
 
   // .benefits__decor
 
   &__decor {
-    margin-bottom: 0;
+    margin-bottom: 13px;
   }
 
   // .benefits__title
 
   &__title {
+    margin-bottom: 13px;
   }
 
   // .benefits__subtitle
 
   &__subtitle {
+    margin-bottom: 13px;
   }
 
   // .benefits__body
 
   &__body {
-    width: 80%;
+    width: 990px;
+
+    @media (max-width: 1360px) {
+      width: 660px;
+    }
+    @media (max-width: 670px) {
+      width: 330px;
+    }
+    &:last-child {
+      margin-bottom: 28px;
+    }
   }
 
   // .benefits__cards
 
   &__cards {
-    display: flex;
-    justify-content: center;
-
-    flex-wrap: wrap;
-    gap: 10px;
+    position: relative;
   }
 
   // .benefits__card
 
   &__card {
+    border: 2px solid #ac8f64;
+    border-radius: 30px;
     align-items: flex-start;
-    gap: 10px;
-    max-width: 322px;
-    width: calc(100% / 2);
+    // gap: 10px;
+    width: 322px;
+    // max-width: 350px;
+    // width: calc(100% / 2);
     padding: 16px 12px;
   }
 
   // .benefits__request
 
   &__request {
+    @include adaptiveValue("width", 1400, 768, 1920, 967.98, 1);
+    @include adaptiveValue("gap", 68, 26, 1920, 767.98, 1);
+
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 68px;
     height: 200px;
-    width: 80%;
     background: radial-gradient(
       74.45% 238.31% at 66.48% 50%,
       rgba(0, 114, 187, 0.77) 0%,
@@ -68,6 +81,10 @@
 
     box-shadow: 0px 39px 36px -31px rgba(138, 124, 99, 0.15);
     border-radius: 30px;
+
+    @media (max-width: $mobileSmall) {flex-direction: column;
+
+    }
   }
 
   // .benefits__question
@@ -100,25 +117,28 @@
   // .card__title
 
   &__title {
+    @include adaptiveValue("font-size", 20, 16, 1920, 319.98, 1);
+
     font-family: $fontFamilyPlayfair;
-    font-size: 20px;
   }
 
   // .card__text
 
   &__text {
+    @include adaptiveValue("font-size", 16, 14, 1920, 319.98, 1);
+
     font-weight: 300;
   }
 }
 .button {
   // .button__question
+  @include adaptiveValue("font-size", 20, 14, 1920, 319.98, 1);
 
   &__question {
     font-family: $fontFamilyPlayfair;
-    font-size: 20px;
     font-weight: 700;
     color: #fff;
-    padding: 14px 20px;
+    padding: 10px 20px;
     line-height: 1;
     border: 3px solid #ffffff;
   }
@@ -127,12 +147,61 @@
 
   &__call {
     font-family: $fontFamilyPlayfair;
-    font-size: 20px;
     font-weight: 700;
     color: #fff;
-    padding: 14px 20px;
+    padding: 10px 20px;
     line-height: 1;
     border: 3px solid #ffffff;
     background-color: $mainColorBrown;
+  }
+}
+.benefits {
+  // .benefits__card
+
+  &__card {
+  }
+}
+.benefits-card {
+  // .benefits-card__block
+
+  &__block {
+    margin-bottom: 10px;
+  }
+
+  // .benefits-card__icon
+
+  &__icon {
+  }
+
+  // .benefits-card__title
+
+  &__title {
+    font-family: $fontFamilyPlayfair !important;
+    font-size: 20px !important;
+  }
+
+  // .benefits-card__text
+
+  &__text {
+    font-family: $fontFamilyJost !important;
+  }
+}
+.benefits__body {
+  &.swiper {
+    @media (min-width: 670px) {
+      display: none;
+    }
+  }
+}
+.benefits__body-pc {
+  & .benefits__cards {
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  @media (max-width: 670px) {
+    display: none;
   }
 }

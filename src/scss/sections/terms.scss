@@ -13,7 +13,6 @@
   // .terms__title
 
   &__title {
-    font-size: 24px;
     line-height: math.div(32, 24);
     margin-bottom: 44px;
   }
@@ -21,7 +20,6 @@
   // .terms__subtitle
 
   &__subtitle {
-    font-size: 20px;
     line-height: math.div(27, 20);
     margin-bottom: 40px;
   }
@@ -29,23 +27,18 @@
   // .terms__desc
 
   &__desc {
-    font-size: 16px;
+    @include adaptiveValue("font-size", 16, 14, 1920, 319.98, 1);
+    @include adaptiveValue("width", 800, 300, 1920, 319.98, 1);
     font-weight: 700;
     line-height: math.div(23, 26);
     text-align: center;
 
-    width: 60%;
     margin-bottom: 30px;
   }
 
   // .terms__body
 
   &__body {
-    // display: grid;
-    // grid-template-columns: repeat(3, 1fr);
-    // margin-left: auto;
-    // margin-right: auto;
-    @include adaptiveValue("width", 1000, 1300, 2500, 1300, 1);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -54,13 +47,28 @@
     align-self: center;
     text-align: center;
 
-    grid-column-gap: 22px;
-    grid-row-gap: 40px;
+    @include adaptiveValue(" margin-left", 640, 0, 3000, 1400, 1);
+    @include adaptiveValue(" margin-right", 640, 0, 3000, 1400, 1);
+
+    @include adaptiveValue(" column-gap", 22, 6, 1920, 1360, 1);
+    @include adaptiveValue(" row-gap", 40, 16, 1920, 1360, 1);
   }
 
   // .terms__card
 
   &__card {
+    @media (max-width: 1318px) {
+      width: 540px !important;
+    }
+    @media (max-width: 578px) {
+      width: 480px !important;
+    }
+    @media (max-width: $mobileSmall) {
+      width: 400px !important;
+    }
+    @media (max-width: 380px) {
+      width: 330px !important;
+    }
   }
 
   // .terms__card-wrapper
@@ -76,18 +84,19 @@
   // .terms__card-title
 
   &__card-title {
+    @include adaptiveValue("font-size", 20, 15, 1920, 319.98, 1);
+
     font-family: $fontFamilyPlayfair;
     font-weight: 700;
-    font-size: 20px;
     margin-bottom: 34px;
   }
 
   // .terms__card-text
 
   &__card-text {
-    font-weight: 200;
-    font-size: 20px;
+    @include adaptiveValue("font-size", 20, 14, 1920, 319.98, 1);
 
+    font-weight: 200;
     margin-bottom: 20px;
   }
 
@@ -116,10 +125,14 @@
     border-radius: 10px;
     background: radial-gradient(
       74.45% 238.31% at 66.48% 50%,
-      rgba(172, 143, 100, 1) 0%,
-      rgba(172, 143, 100, 1) 100%
+      rgba(172, 143, 100, 0.77) 0%,
+      rgba(172, 143, 100, 0.4928) 100%
     );
     box-shadow: 0px 39px 36px -31px rgba(138, 124, 99, 0.15);
+    
+    @media (max-width: $mobileSmall) {
+      padding: 20px 16px;
+    }
   }
 
   // .terms__card-subtitle
@@ -146,7 +159,11 @@
     position: relative;
 
     border-radius: 10px;
-    height: 292px;
+    height: 292px !important;
+
+    @media (max-width: $mobileSmall) {
+      height: 240px !important;
+    }
   }
   // .terms__card
 
@@ -169,8 +186,7 @@
     display: flex;
     flex-direction: column;
     padding: 40px 62px;
-    min-width: 420px;
-    max-width: 420px;
+    width: 420px;
 
     color: #fff;
 
@@ -180,12 +196,8 @@
       rgba(0, 114, 187, 0.4928) 100%
     );
 
-    &:hover {
-      background: radial-gradient(
-        74.45% 238.31% at 66.48% 50%,
-        rgba(172, 143, 100, 0.77) 0%,
-        rgba(172, 143, 100, 0.4928) 100%
-      );
+    @media (max-width: $mobileSmall) {
+      padding: 20px 22px;
     }
   }
 
@@ -243,6 +255,6 @@
     height: 300px !important;
   }
   @media (max-width: $mobileSmall) {
-    height: 180px !important;
+    height: 240px !important;
   }
 }

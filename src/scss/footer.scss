@@ -1,12 +1,19 @@
 //====================================================================================================
 .footer {
   @include adaptiveValue("margin-left", 400, 280, 1920, 991.98, 2);
-  padding-top: 46px;
+  padding-top: 6px;
   padding-bottom: 16px;
 
   // .footer__container
 
   &__container {
+    display: flex;
+    flex-direction: column;
+    color: $mainColorBrown;
+    font-family: $fontFamilyPlayfair;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: math.div(18, 14);
   }
 
   // .footer__text
@@ -15,12 +22,19 @@
     display: flex;
     justify-content: center;
     text-align: center;
+  }
 
-    color: $mainColorBrown;
-    font-family: $fontFamilyPlayfair;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: math.div(18, 14);
+  // .footer__politic
+
+  &__politic {
+    margin-left: 100px;
+    margin-bottom: 16px;
+
+    text-align: start;
+    @media (max-width: $mobile) {
+      margin-left: 0;
+      text-align: center;
+    }
   }
 }
 
