@@ -764,7 +764,7 @@ function initSliders() {
       breakpoints: {
         1360: { autoplay: false, navigation: false, slidesPerView: 3 },
 
-        670: { autoplay: false, slidesPerView: 2 },
+        670: {   slidesPerView: 2 },
         300: {
           slidesPerView: 1,
         },

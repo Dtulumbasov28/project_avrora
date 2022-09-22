@@ -46,6 +46,8 @@
       & .card__desc {
         font-weight: 700;
       }
+
+      border: 2px solid $mainColorBlue;
     }
   }
 }
@@ -103,14 +105,7 @@
   &__decor {
   }
 }
-.wrapper-button-team {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-right: 100px;
-  margin-bottom: 22px;
-}
+
 .team-button-next {
   & svg {
     &:hover {

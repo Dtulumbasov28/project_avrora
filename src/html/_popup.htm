@@ -1,10 +1,28 @@
-<!-- <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
-			</div>
-		</div>
-	</div>
-</div> -->
+<div id="popup" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close">Закрыть</button>
+      <h4 class="popup__title">Заказать звонок</h4>
+      <form action="files/sendmail/sendmail.php" method="POST">
+        <input
+          data-required
+          type="text"
+          name="form[name]"
+          data-error="Error"
+          placeholder="Введите имя"
+          class="popup__name"
+        />
+        <input
+          data-required=""
+          type="tel"
+          name="form[tel]"
+          data-error="Error"
+          placeholder="Номер телефона"
+          class="popup__tel"
+        />
+        <button type="submit" class="button">Отправить</button>
+        <button class="effect effect-1" title="Learn More">Learn More</button>
+      </form>
+    </div>
+  </div>
+</div>
