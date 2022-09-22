@@ -63,6 +63,7 @@
     // .main-spollers__item
 
     &__item {
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -71,6 +72,14 @@
 
       width: calc(100% / 4);
       padding: 16px 32px;
+
+      &:hover {
+        & .main-spollers__icon-hover {
+			transition: opacity 0.4s;
+
+          opacity: 0.2;
+        }
+      }
 
       @media (max-width: $tablet) {
         width: calc(100% / 2);
@@ -119,6 +128,17 @@
       color: $mainColorBlue;
       font-weight: 700;
       margin-bottom: 10px;
+    }
+
+    // .main-spollers__icon-hover
+    &__icon-hover {
+      fill: $mainColorBrown;
+      position: absolute;
+      bottom: 6px;
+      right: 1px;
+      width: 65px;
+      height: 70px;
+      opacity: 0;
     }
   }
   .spollers {

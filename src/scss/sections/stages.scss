@@ -19,8 +19,15 @@
     font-weight: 200;
     width: 70%;
     @include adaptiveValue("margin-left", 20, 100, 1920, 991.98, 1);
+    @include adaptiveValue("margin-bottom", 65, 50, 991.98, 479.98, 1);
 
-    margin-bottom: 65px;
+    margin-top: 60px;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+
+      margin-left: 0;
+    }
 
     &::after {
       content: "";
@@ -33,7 +40,6 @@
     }
 
     @media (max-width: $tablet) {
-      margin-top: 40px;
     }
   }
 
@@ -53,6 +59,8 @@
   }
 }
 .stages-tabs__title {
+  @include adaptiveValue("font-size", 18, 14, 1920, 479.98, 1);
+
   font-family: $fontFamilyPlayfair;
   font-weight: 700;
   line-height: math.div(20, 18);
@@ -188,12 +196,13 @@
   // .stages-spoller__title
 
   &__title {
-
+    @include adaptiveValue("font-size", 24, 12, 1920, 319.98, 1);
   }
 
   // .stages-spoller__subtitle
 
   &__subtitle {
+    @include adaptiveValue("font-size", 20, 12, 1920, 319.98, 1);
   }
 }
 
@@ -214,12 +223,16 @@
   }
   & .tabs__body {
     margin-bottom: 10px;
-    @include adaptiveValue("width", 460, 260, 1300.98, 319.98, 1);
+    @include adaptiveValue("width", 460, 280, 1300.98, 319.98, 1);
     border-radius: 30px;
     padding: 10px 20px;
     background-color: #fff;
 
     box-shadow: 0 0 10px rgb(131 131 131 / 50%);
+
+    & span {
+      @include adaptiveValue("font-size", 16, 12, 1920, 319.98, 1);
+    }
   }
   & li {
     margin-bottom: 20px;
@@ -228,7 +241,4 @@
       content: none;
     }
   }
-}
-.stages-tabs__title {
-  @include adaptiveValue("font-size", 18, 16, 1300.98, 767.98, 1);
 }

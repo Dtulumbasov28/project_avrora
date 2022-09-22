@@ -33,8 +33,12 @@
       font-weight: 400;
     }
     & .spollers-more {
+      transition: font-weight 0.1s;
+
+      font-weight: 400;
+
       &::after {
-        transition: transform 0.3s;
+        transition: transform 0.4s;
         transform: rotate(-90deg);
       }
     }

@@ -158,7 +158,6 @@
   }
   & .tabs__body {
     margin-bottom: 10px;
-    @include adaptiveValue("width", 600, 320, 1300.98, 319.98, 1);
     border-radius: 30px;
     padding: 18px 20px;
     background-color: #fff;

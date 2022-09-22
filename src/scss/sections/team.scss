@@ -37,6 +37,8 @@
   // .team__card
 
   &__card {
+    border-color: $mainColorBlue;
+
     width: 240px;
 
     &:hover {
@@ -46,8 +48,13 @@
       & .card__desc {
         font-weight: 700;
       }
+      & .card__icon-team {
+        transition: fill 0.4s;
 
-      border: 2px solid $mainColorBlue;
+        fill: $mainColorBrown;
+      }
+
+      border-color: $mainColorBrown;
     }
   }
 }
@@ -78,6 +85,7 @@
   // .card__icon-team
 
   &__icon-team {
+    fill: $mainColorBlue;
     position: absolute;
     width: 150px;
     height: 150px;
