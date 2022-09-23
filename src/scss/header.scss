@@ -54,17 +54,21 @@
   // .menu-header__body
 
   &__body {
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 
   // .menu-header__list
 
   &__list {
     display: flex;
-    align-items: center;
     justify-content: center;
     gap: 14px;
 
     @media (max-width: $tablet) {
+      gap: 10px;
+
       justify-content: space-around;
     }
     @media (max-width: $mobileSmall) {
@@ -75,19 +79,21 @@
   // .menu-header__item
 
   &__item {
+    display: flex;
   }
 
-  // .menu-header__button
+  // .menu-header__button-call
 
-  &__button {
-    line-height: math.div(13, 16);
+  &__button-call {
+    white-space: nowrap;
+    text-transform: uppercase;
 
-    font-weight: 700;
-    padding: 8px;
-    border: 2px solid $mainColorBrown;
-
-    border-radius: 20px;
-    transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+    @media (max-width: $tablet) {
+      margin-bottom: 12px;
+    }
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 
   // .menu-header__top
@@ -112,6 +118,16 @@
   // .menu-header__button
 
   &__button {
+    @include adaptiveValue("font-size", 14, 10, 991.98, 319.98, 1);
+
+    line-height: 1;
+
+    @media (max-width: $tablet) {
+      width: 112px;
+
+      justify-content: space-around;
+      line-height: math.div(10, 14);
+    }
   }
 }
 .contacts {
@@ -124,10 +140,14 @@
     gap: 6px;
     margin-bottom: 6px;
 
-    &:hover {
-      & .contacts__icon {
-        scale: 1.2;
-        transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+    @media (max-width: $tablet) {
+      &:hover {
+        & .contacts__icon {
+          scale: 1.2;
+          fill: #fff;
+          scale: 1.2;
+          transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+        }
       }
     }
   }
@@ -135,10 +155,14 @@
   // .contacts__icon
 
   &__icon {
+    fill: $mainColorGrey;
     width: 12px;
     height: 12px;
 
     @media (max-width: $tablet) {
+      fill: $mainColorBrown;
+    }
+    @media (max-width: $mobile) {
       display: none;
     }
   }
@@ -148,6 +172,12 @@
   &__icon-whatsapp {
     width: 20px;
     height: 20px;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      transform: rotate(-45deg);
+      transition: all 0.2s ease-out;
+    }
   }
 
   // .contacts__number
@@ -156,6 +186,11 @@
     @media (max-width: $tablet) {
       color: $mainColorBrown;
       font-family: $fontFamilyJost;
+      &:hover {
+        transition: color 0.4s;
+
+        color: #fff;
+      }
     }
   }
 
@@ -166,11 +201,24 @@
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: $tablet) {
+      color: $mainColorBrown;
+    }
+    @media (max-width: $mobile) {
+      display: none;
+    }
+
     & a {
       transition: color 0.4s;
 
       &:hover {
         color: $mainColorBrown;
+      }
+
+      @media (max-width: $tablet) {
+        &:hover {
+          color: #fff;
+        }
       }
     }
   }
@@ -191,15 +239,6 @@
   }
 }
 .button {
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  border: 2px solid $mainColorBrown;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-
-  font-weight: 700;
-
   // .button__brown
 
   &__brown {
@@ -236,20 +275,25 @@
 
 //====================================================================================================
 
-.menu-header__button {
+.button__transparent {
+  padding: 8px 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+.button__transparent {
+  letter-spacing: 0.2px;
   font-weight: 600;
   padding: 8px 10px;
   background-color: transparent;
   border: 2px solid #ac8f64;
-  font-size: 14px;
   border-radius: 20px;
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
 
-.menu-header__button::before,
-.menu-header__button::after {
+.button__transparent::before,
+.button__transparent::after {
   position: absolute;
   content: "";
   top: 0;
@@ -258,14 +302,13 @@
   left: 0;
 }
 
-.menu-header__button::before {
-  background-color: #ac8f64;
+.button__transparent::before {
   z-index: -1;
-  transition: opacity 240ms linear;
+  transition: opacity 440ms linear;
   opacity: 0;
 }
 
-.menu-header__button::after {
+.button__transparent::after {
   content: "";
   height: 150%;
   width: 0.25em;
@@ -273,14 +316,16 @@
   box-shadow: 0px 0px 8px 4px #fff;
   transform: translateX(-1em);
 }
-.menu-header__button:hover {
+.button__transparent:hover {
+  background-color: #ac8f64;
+
   color: #fff;
 }
-.menu-header__button:hover::before {
+.button__transparent:hover::before {
   opacity: 1;
 }
 
-.menu-header__button:hover::after {
+.button__transparent:hover::after {
   animation-duration: 300ms;
   animation-name: sweep;
 }

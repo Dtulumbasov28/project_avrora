@@ -1,30 +1,40 @@
 <header class="header">
   <div class="header__container">
     <div class="header__menu menu-header">
-      <nav class="menu-header__body">
+      <nav data-da=".fixed-menu,991.98,1" class="menu-header__body">
         <ul class="menu-header__list">
           <li class="menu-header__item">
-            <button class="menu-header__button">Лечение Наркомании</button>
+            <button class="button button__transparent menu-header__button">
+              Лечение Наркомании
+            </button>
           </li>
           <li class="menu-header__item">
-            <button class="menu-header__button">Лечение Алкоголизма</button>
+            <button class="button button__transparent menu-header__button">
+              Лечение Алкоголизма
+            </button>
           </li>
           <li class="menu-header__item">
-            <button class="menu-header__button">Снятие ломки</button>
+            <button class="button button__transparent menu-header__button">
+              Снятие ломки
+            </button>
           </li>
           <li class="menu-header__item">
-            <button class="menu-header__button">Реабилитация</button>
+            <button class="button button__transparent menu-header__button">
+              Реабилитация
+            </button>
           </li>
         </ul>
       </nav>
       <div class="menu-header__top">
-
-        <div class="menu-header__contacts contacts">
-          <a href="tel:+78652542825"  data-da=".fixed-menu,991.98,1" class="contacts__tel">
+        <div
+          data-da=".fixed-menu,991.98,2"
+          class="menu-header__contacts contacts"
+        >
+          <a href="tel:+78652542825" class="contacts__tel">
             <svg class="contacts__icon">
               <use xlink:href="@img/icons/icons.svg#svg-phone"></use>
             </svg>
-            <div  class="contacts__number">+7 (865) 254-28-25</div>
+            <div class="contacts__number">+7 (865) 254-28-25</div>
           </a>
           <div class="contacts__messengers">
             <a href="#" class="contacts__telegram">TELEGRAM</a>
@@ -32,11 +42,16 @@
             <a href="#" class="contacts__viber">VIBER</a>
           </div>
         </div>
-        <button data-popup="#popup" class="menu-header__button button button__brown" data-da=".fixed-menu,991.98,2">
+        <button
+          data-da=".menu-header__contacts,991.98,0"
+          data-popup="#popup-call"
+          type="button"
+          class="button button__transparent menu-header__button-call"
+        >
           Заказать звонок
         </button>
-        <button class="button__whaatsapp" data-da=".fixed-menu,991.98,2">
-          <svg class="contacts__icon-whatsapp" >
+        <button class="button__whaatsapp" data-da=".fixed-menu,767.98,4">
+          <svg class="contacts__icon-whatsapp">
             <use xlink:href="@img/icons/icons.svg#svg-number_header"></use>
           </svg>
         </button>

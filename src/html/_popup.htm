@@ -1,28 +1,124 @@
-<div id="popup" aria-hidden="true" class="popup">
+<div id="popup-call" aria-hidden="true" class="popup">
   <div class="popup__wrapper">
     <div class="popup__content">
-      <button data-close type="button" class="popup__close">Закрыть</button>
+      <button data-close type="button" class="popup__close"></button>
       <h4 class="popup__title">Заказать звонок</h4>
-      <form action="files/sendmail/sendmail.php" method="POST">
+      <form
+        data-popup-message="#popup-call-send"
+        data-ajax
+        class="popup__form"
+        action="sendCall.php"
+        method="POST"
+      >
+        <div class="popup__text">Имя</div>
         <input
           data-required
           type="text"
-          name="form[name]"
-          data-error="Error"
-          placeholder="Введите имя"
-          class="popup__name"
+          name="name"
+     
+          class="popup__input popup__input--name"
+          required
+          maxlength="38"
         />
+        <div class="popup__text">Номер телефона</div>
         <input
-          data-required=""
+          pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+          minlength="18"
+          maxlength="18"
           type="tel"
-          name="form[tel]"
-          data-error="Error"
-          placeholder="Номер телефона"
-          class="popup__tel"
+          name="tel"
+          class="popup__input popup__input-call--tel"
+          required
         />
-        <button type="submit" class="button">Отправить</button>
-        <button class="effect effect-1" title="Learn More">Learn More</button>
+        <div class="popup__text-privacy">
+          <label class="switch">
+            <input class="popup__checkbox popup__checkbox-call" type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <span> Политика конфиденциальности </span>
+        </div>
+        <input
+          type="submit"
+          value="Отправить"
+          class="button__transparent popup__button popup__button-call"
+          disabled
+        />
       </form>
     </div>
   </div>
 </div>
+<div id="popup-call-send" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close"></button>
+      <h4 class="popup__title">Благодарим за заявку, ожидайте звонка!</h4>
+    </div>
+  </div>
+</div>
+
+<div id="popup-question" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close"></button>
+      <h4 class="popup__title">Задать вопрос</h4>
+      <form
+        data-popup-message="#popup-question-send"
+        data-ajax
+        class="popup__form"
+        action="sendQuestion.php"
+        method="POST"
+      >
+      <div class="popup__text">Имя</div>
+      <input
+      data-required
+      type="text"
+      name="name"
+      class="popup__input popup__input--name"
+      required
+      maxlength="38"
+      />
+      <div class="popup__text">Номер телефона</div>
+      <input
+      pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+      minlength="18"
+      maxlength="18"
+      type="tel"
+      name="tel"
+      class="popup__input popup__input-question--tel"
+      required
+      />
+      <div class="popup__text">Вопрос</div>
+        <textarea
+        type="text"
+        name="question"
+        class="popup__input popup__input-question"
+        required
+        ></textarea>
+        <div class="popup__text-privacy">
+          <label class="switch">
+            <input class="popup__checkbox popup__checkbox-question" type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <span> Политика конфиденциальности </span>
+        </div>
+        <input
+        type="submit"
+        value="Отправить"
+        class="button__transparent popup__button popup__button-question"
+        disabled
+        />
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div id="popup-question-send" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close"></button>
+      <h4 class="popup__title">Благодарим за вопрос, ожидайте звонка!</h4>
+    </div>
+  </div>
+</div>
+

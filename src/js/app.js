@@ -76,15 +76,15 @@ import * as flsForms from "./files/forms/forms.js";
 /* Работа с полями формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
 /*
-*/
 flsForms.formFieldsInit({
 	viewPass: false,
 	autoHeight: false
 });
+*/
 
 /* Oтправка формы */
 /* Документация: https://template.fls.guru/template-docs/rabota-s-formami.html */
-// flsForms.formSubmit();
+flsForms.formSubmit();
 
 /* Модуль формы "колличество" */
 // flsForms.formQuantity();
@@ -145,7 +145,7 @@ import "./files/sliders.js";
 Документация по работе в шаблоне: В HTML добавляем к блоку атрибут data-simplebar
 Документация плагина: https://github.com/Grsmto/simplebar/tree/master/packages/simplebar
 Сниппет(HTML): 
-*/
+
 // import './files/scroll/simplebar.js';
 
 // Ленивая (отложенная) загрузка картинок
@@ -158,7 +158,7 @@ import "./files/sliders.js";
 // Документация: https://template.fls.guru/template-docs/modul-nabljudatel-za-poyavleniem-elementa-pri-skrolle.html
 // Сниппет(HTML):
 import './libs/watcher.js'
-
+*/
 // Функции работы скроллом
 import * as flsScroll from "./files/scroll/scroll.js";
 
@@ -181,7 +181,7 @@ flsScroll.pageNavigation();
 Документация плагина: https://www.lightgalleryjs.com/docs/
 Сниппет(HTML):
 */
-// import "./files/gallery.js";
+import "./files/gallery.js";
 
 // ========================================================================================================================================================================================================================================================
 // Прочие плагины ============================================================================================================================================================================================================================================================================================================

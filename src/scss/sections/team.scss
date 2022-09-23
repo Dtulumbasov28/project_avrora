@@ -78,6 +78,7 @@
     justify-content: center;
 
     & img {
+      width: 130px;
       z-index: 2;
     }
   }
@@ -87,8 +88,8 @@
   &__icon-team {
     fill: $mainColorBlue;
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
   }
 
   // .card__text
@@ -114,23 +115,3 @@
   }
 }
 
-.team-button-next {
-  & svg {
-    &:hover {
-      border-radius: 10px;
-      background: #f3f3f3;
-      box-shadow: 10px 10px 20px 0px #00000017;
-      box-shadow: -10px -10px 20px 0px #ffffff;
-    }
-  }
-}
-.team-button-prev {
-  & svg {
-    &:hover {
-      border-radius: 10px;
-      background: #f3f3f3;
-      box-shadow: 10px 10px 20px 0px #00000017;
-      box-shadow: -10px -10px 20px 0px #ffffff;
-    }
-  }
-}

@@ -39,6 +39,8 @@
     @media (max-width: $mobileSmall) {
       width: 320px;
     }
+
+   
   }
 }
 .section {
@@ -51,4 +53,9 @@
 
   &__title {
   }
+}
+
+
+.lg-image {
+  border-radius: 10px !important;
 }

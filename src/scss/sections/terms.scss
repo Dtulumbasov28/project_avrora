@@ -57,7 +57,7 @@
   // .terms__card
 
   &__card {
-    @media (max-width: 1318px) {
+    @media (max-width: 1319px) {
       width: 540px !important;
     }
     @media (max-width: 578px) {
@@ -87,6 +87,23 @@
   // .terms__card-item
 
   &__card-item {
+  }
+  // .terms__item-wrapper
+
+  &__item-wrapper {
+    display: flex;
+    gap: 10px;
+
+    @media (max-width: 1319px) {
+      flex-direction: column;
+
+      &:nth-child(2) {
+        flex-direction: column-reverse;
+      }
+      &:nth-child(4) {
+        flex-direction: column-reverse;
+      }
+    }
   }
 
   // .terms__card-title

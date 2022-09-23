@@ -506,7 +506,7 @@ function initSliders() {
       // промежуток между слайдами
       spaceBetween: 12,
       // бесконечная прокрутка
-      loop: true,
+      loop: false,
       // скорость прокрутки
       speed: 800,
       // отключение возможности прокрутки слайдера мышью
@@ -514,8 +514,8 @@ function initSliders() {
 
       // Кнопки "влево/вправо"
       navigation: {
-        prevEl: ".documents-button-next",
-        nextEl: ".documents-button-prev",
+        prevEl: ".documents-button-prev",
+        nextEl: ".documents-button-next",
       },
 
       //touchRatio: 0,
@@ -597,7 +597,7 @@ function initSliders() {
       // промежуток между слайдами
       spaceBetween: 10,
       // бесконечная прокрутка
-      loop: true,
+      loop: false,
       // скорость прокрутки
       speed: 800,
       // отключение возможности прокрутки слайдера мышью

@@ -143,6 +143,7 @@
 
   &__subtitle {
     @include adaptiveValue("font-size", 20, 12, 1300, 319.98, 1);
+    @include adaptiveValue("margin-bottom", 32, 12, 991.98, 319.98, 1);
 
     font-family: "Playfair Display";
     font-weight: 700;
