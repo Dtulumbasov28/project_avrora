@@ -8,6 +8,7 @@
   @include adaptiveValue("margin-left", 400, 280, 1920, 991.98, 2);
 }
 
+// Заголовки секций
 .section {
   // .section__title-left
 
@@ -24,6 +25,9 @@
     color: $mainColorBlue;
     line-height: math.div(30, 24);
 
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
     &::before {
       @include adaptiveValue("width", 8, 4, 1920, 479.98, 1);
 
@@ -39,19 +43,22 @@
   // .section__decor
 
   &__decor {
-    // margin-right: auto;
-    // margin-left: auto;
-    @include adaptiveValue("width", 200, 100, 1920, 479.98, 1);
-    @include adaptiveValue("height", 80, 40, 1920, 479.98, 1);
-
+	 width: 200px;
+	 height: 80px;
     margin-bottom: 40px;
+
+    @media (max-width: $tablet) {
+		width: 100px;
+		height: 40px;
+      margin-bottom: 20px;
+    }
   }
 
   // .section__title
 
   &__title {
     @include adaptiveValue("font-size", 28, 16, 1920, 319.98, 1);
-    @include adaptiveValue("width", 800, 300, 1920, 319.98, 1);
+    @include adaptiveValue("width", 800, 300, 991.98, 319.98, 1);
 
     text-align: center;
 
@@ -64,7 +71,7 @@
 
   &__subtitle {
     @include adaptiveValue("font-size", 28, 14, 1920, 319.98, 1);
-    @include adaptiveValue("width", 800, 300, 1920, 319.98, 1);
+    @include adaptiveValue("width", 800, 300, 991.98, 319.98, 1);
 
     text-align: center;
 
@@ -74,18 +81,18 @@
   }
 }
 
-svg {
-  height: 100%;
-
-  width: 100%;
-}
+// Кнопки переключения слайдов
 .wrapper-button {
   width: 100%;
   display: flex;
   justify-content: flex-end;
   gap: 10px;
-  margin-right: 200px;
-  margin-bottom: 22px;
+  margin-right: 34%;
+  margin-bottom: 20px;
+
+  @media (max-width: $mobile) {
+    margin-right: 0;
+  }
 
   //.wrapper-button__bottom
   &__bottom {
@@ -96,8 +103,6 @@ svg {
       display: flex;
       justify-content: flex-end;
       gap: 10px;
-      margin-right: 200px;
-      margin-bottom: 22px;
     }
   }
 
@@ -110,24 +115,17 @@ svg {
       display: flex;
       justify-content: flex-end;
       gap: 10px;
-      margin-right: 200px;
-      margin-bottom: 22px;
     }
   }
-}
-
-.button {
-  // .button__slider
-  &__slider {
-    fill: $mainColorBlue;
-
-    &:hover {
-      transition: fill 0.4s;
-      fill: $mainColorBrown;
-    }
-  }
-
-  // .button__slider-transparent
-  &__slider-transparent {
-  }
+  .button {
+	// .button__slider
+	&__slider {
+	  fill: $mainColorBlue;
+ 
+	  &:hover {
+		 transition: fill 0.4s;
+		 fill: $mainColorBrown;
+	  }
+	}
+ }
 }

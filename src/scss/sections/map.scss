@@ -2,11 +2,16 @@
   // .map__container
 
   &__container {
-    padding-top: 48px;
-
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    padding-top: 48px;
+
+    @media (max-width: $tablet) {
+      padding-top: 20px;
+    }
   }
 
   // .map__title-left
@@ -25,6 +30,10 @@
 
     width: 90%;
     border-radius: 50px;
+
+    @media (max-width: $tablet) {
+      margin-top: 60px;
+    }
   }
 
   // .map__content
@@ -81,7 +90,7 @@
 
   z-index: 2;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 416px;
   display: flex;
@@ -106,7 +115,6 @@
     border-radius: 10px;
     gap: 6px;
     line-height: math.div(12, 10);
-
   }
 
   // .content-map__icon
@@ -217,8 +225,7 @@
       bottom: 20px;
       right: 20px;
       border-radius: 10px;
-      line-height: math.div(12 , 10);
-
+      line-height: math.div(12, 10);
     }
   }
 }

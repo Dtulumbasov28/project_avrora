@@ -1,11 +1,12 @@
 //====================================================================================================
 .header {
   @include adaptiveValue("margin-left", 400, 280, 1920, 991.98, 2);
-  @include adaptiveValue("font-size", 16, 14, 1920, 991.98, 1);
-  @include adaptiveValue("font-size", 14, 10, 479.98, 349.98, 1);
+
+
+  margin-top: 30px;
   position: relative;
   font-weight: 700;
-  z-index: 3;
+  z-index: 33;
 
   @media (max-width: $tablet) {
     margin: 0;
@@ -13,18 +14,18 @@
   @media (max-width: $mobileSmall) {
   }
 
-  &::before {
-    z-index: 2;
-    content: "";
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    border: 2px solid #bd1900;
+  //   &::before {
+  //     z-index: 2;
+  //     content: "";
+  //     position: absolute;
+  //     top: 20px;
+  //     width: 100%;
+  //     border: 2px solid #bd1900;
 
-    @media (max-width: $tablet) {
-      display: none;
-    }
-  }
+  //     @media (max-width: $tablet) {
+  //       display: none;
+  //     }
+  //   }
 
   // .header__container
 
@@ -34,13 +35,14 @@
   // .header__menu
 
   &__menu {
-    @include adaptiveValue("margin-top", 60, 46, 1920, 991.98, 1);
-
     display: flex;
     gap: 26px;
 
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 
+    @media (max-width: $tablet) {
+      @include adaptiveValue("margin-top", 100, 46, 991.98, 319.98, 1);
+    }
     @media (max-width: 1300px) {
       flex-direction: column-reverse;
     }
@@ -55,13 +57,13 @@
 
   &__body {
     @media (max-width: $mobile) {
-      display: none;
     }
   }
 
   // .menu-header__list
 
   &__list {
+    position: relative;
     display: flex;
     justify-content: center;
     gap: 14px;
@@ -72,7 +74,7 @@
       justify-content: space-around;
     }
     @media (max-width: $mobileSmall) {
-      gap: 10px;
+      gap: 4px;
     }
   }
 
@@ -119,14 +121,15 @@
 
   &__button {
     @include adaptiveValue("font-size", 14, 10, 991.98, 319.98, 1);
-
+    width: auto;
     line-height: 1;
 
     @media (max-width: $tablet) {
-      width: 112px;
-
       justify-content: space-around;
       line-height: math.div(10, 14);
+    }
+    @media (max-width: $mobileSmall) {
+      padding: 5px !important;
     }
   }
 }
@@ -140,13 +143,22 @@
     gap: 6px;
     margin-bottom: 6px;
 
+    &:hover {
+      transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+      color: $mainColorBrown;
+
+      & .contacts__icon {
+        transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+		  scale: 1.2;
+        fill: $mainColorBrown;
+      }
+    }
+
     @media (max-width: $tablet) {
       &:hover {
         & .contacts__icon {
           scale: 1.2;
           fill: #fff;
-          scale: 1.2;
-          transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
         }
       }
     }
@@ -164,19 +176,6 @@
     }
     @media (max-width: $mobile) {
       display: none;
-    }
-  }
-
-  // .contacts__icon-whatsapp
-
-  &__icon-whatsapp {
-    width: 20px;
-    height: 20px;
-    transition: all 0.2s ease-out;
-
-    &:hover {
-      transform: rotate(-45deg);
-      transition: all 0.2s ease-out;
     }
   }
 
@@ -249,26 +248,29 @@
     }
   }
 
-  //.button__whaatsapp
+  //.button__whatsapp
 
-  &__whaatsapp {
+  &__whatsapp {
     display: none;
-    border: none;
-    box-shadow: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: $mainColorBrown;
 
-    & svg {
-      width: 26px;
-      height: 26px;
-    }
-
-    @media (max-width: $tablet) {
+    @media (max-width: $mobile) {
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: $mainColorBrown;
+      transition: all 0.2s ease-out;
+      & svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      &:hover {
+        transform: rotate(-45deg);
+        transition: all 0.2s ease-out;
+      }
     }
   }
 }
@@ -289,7 +291,6 @@
   border-radius: 20px;
   position: relative;
   overflow: hidden;
-  z-index: 1;
 }
 
 .button__transparent::before,
@@ -338,4 +339,18 @@
     transform: translateX(12.5em);
     animation-timing-function: ease-out;
   }
+}
+
+.spollers-body-header {
+  height: auto;
+  z-index: 3;
+  top: 40px;
+  bottom: auto;
+  box-sizing: border-box;
+
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 20px 20px 40px 20px;
+
+  box-shadow: 0 0 10px rgba(131, 131, 131, 0.5);
 }

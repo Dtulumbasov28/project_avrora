@@ -1,6 +1,10 @@
 .reviews {
   padding-top: 80px;
   padding-bottom: 50px;
+
+  @media (max-width: $tablet) {
+    padding-top: 30px;
+  }
   // .reviews__container
 
   &__container {
@@ -15,6 +19,9 @@
 
   &__title-left {
     top: -80px;
+    @media (max-width: $tablet) {
+      top: -30px;
+    }
   }
 
   // .reviews__body
@@ -39,8 +46,6 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-
-    
   }
   // .reviews__head
 
@@ -92,17 +97,22 @@
     font-size: 10px;
     font-weight: 600;
     color: $mainColorBrown;
-
     display: contents;
+    transition: color 0.4s;
+
+    &:hover {
+      color: $mainColorBlue;
+    }
   }
 
   // .reviews__text
 
   &__text {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 200;
     line-height: math.div(20, 15);
-
+    padding-left: 12px;
+    padding-right: 12px;
     column-count: 2;
     column-gap: 20px;
 
@@ -118,9 +128,6 @@
   }
 }
 
-
-
-
 .effect {
   text-align: center;
   display: inline-block;
@@ -130,7 +137,7 @@
   text-transform: capitalize;
   /* background-color: - add your own background-color */
   font: {
-    family: 'Roboto', sans-serif; /* put your font-family */
+    family: "Roboto", sans-serif; /* put your font-family */
     size: 18px;
   }
   padding: 20px 0px;
@@ -143,7 +150,7 @@
 
 .effect.effect-1 {
   transition: all 0.2s linear 0s;
-  
+
   &:before {
     content: "\f178";
     font-family: FontAwesome;
@@ -159,10 +166,10 @@
     width: 40px;
     transition: all 0.2s linear 0s;
   }
-  
+
   &:hover {
     text-indent: -20px;
-    
+
     &:before {
       opacity: 1;
       text-indent: 0px;
@@ -174,7 +181,7 @@
 
 .effect.effect-2 {
   transition: all 0.2s linear 0s;
-  
+
   &:before {
     content: "\f0a4";
     font-family: FontAwesome;
@@ -187,15 +194,15 @@
     right: -30px;
     width: 30px;
     height: 100%;
-    background-color: rgba(black,0.3);
+    background-color: rgba(black, 0.3);
     border-radius: 20px;
     transition: all 0.2s linear 0s;
     text-align: center;
   }
-  
+
   &:hover {
     text-indent: -30px;
-    
+
     &:before {
       right: 0;
       text-indent: 0px;
@@ -206,7 +213,7 @@
 /* effect-3 styles */
 .effect.effect-3 {
   transition: all 0.2s linear 0s;
-  
+
   &:before {
     content: "\f178";
     font-family: FontAwesome;
@@ -223,10 +230,10 @@
     font-size: 30px;
     transition: all 0.2s linear 0s;
   }
-  
+
   &:hover {
     text-indent: -9999px;
-    
+
     &:before {
       top: 0;
       text-indent: 0;
@@ -237,7 +244,7 @@
 /* effect-4 styles */
 .effect.effect-4 {
   transition: all 0.2s linear 0s;
-  
+
   &:before {
     content: "\f178";
     font-family: FontAwesome;
@@ -251,15 +258,15 @@
     height: 100%;
     text-align: center;
     font-size: 30px;
-    transform: scale(0,1);
+    transform: scale(0, 1);
     transition: all 0.2s linear 0s;
   }
-  
+
   &:hover {
     text-indent: -9999px;
-    
+
     &:before {
-      transform: scale(1,1);
+      transform: scale(1, 1);
       text-indent: 0;
     }
   }
@@ -269,7 +276,7 @@
 
 .effect.effect-5 {
   transition: all 0.2s linear 0s;
-  
+
   &:before {
     content: "\f054";
 
@@ -281,18 +288,18 @@
     left: 0px;
     height: 100%;
     width: 30px;
-    background-color: rgba(blue,0.3);
+    background-color: rgba(blue, 0.3);
     border-radius: 0 50% 50% 0;
-    transform: scale(0,1);
+    transform: scale(0, 1);
     transform-origin: left center;
     transition: all 0.2s linear 0s;
   }
-  
-   &:hover {
+
+  &:hover {
     text-indent: 30px;
-    
+
     &:before {
-      transform: scale(1,1);
+      transform: scale(1, 1);
       text-indent: 0;
     }
   }

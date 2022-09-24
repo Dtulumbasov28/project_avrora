@@ -9,11 +9,12 @@
   &__container {
     display: flex;
     flex-direction: column;
-    color: $mainColorBrown;
-    font-family: $fontFamilyPlayfair;
+
     font-size: 14px;
     font-weight: 700;
+    font-family: $fontFamilyPlayfair;
     line-height: math.div(18, 14);
+    color: $mainColorBrown;
   }
 
   // .footer__text
@@ -29,8 +30,8 @@
   &__politic {
     margin-left: 100px;
     margin-bottom: 16px;
-
     text-align: start;
+	 
     @media (max-width: $mobile) {
       margin-left: 0;
       text-align: center;

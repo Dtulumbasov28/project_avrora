@@ -18,26 +18,17 @@
     @media (max-width: $tablet) {
       border-radius: 10px !important;
     }
-    // .main__wrapper
-
-    &__wrapper {
-    }
 
     // .main__slide
 
-    &__slide {
-      & img {
-        width: 989px;
-      }
-    }
+   //  &__slide {
+   //    & img {
+   //      width: 989px;
+   //    }
+   //  }
   }
 }
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
+
 .swiper-pagination {
   cursor: pointer;
   display: flex;

@@ -2,6 +2,11 @@
   padding-top: 46px;
   padding-bottom: 40px;
 
+  @media (max-width: $tablet) {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
   // .terms__container
 
   &__container {
@@ -15,6 +20,10 @@
   &__title {
     line-height: math.div(32, 24);
     margin-bottom: 44px;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 14px;
+    }
   }
 
   // .terms__subtitle
@@ -22,18 +31,26 @@
   &__subtitle {
     line-height: math.div(27, 20);
     margin-bottom: 40px;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 14px;
+    }
   }
 
   // .terms__desc
 
   &__desc {
     @include adaptiveValue("font-size", 16, 14, 1920, 319.98, 1);
-    @include adaptiveValue("width", 800, 300, 1920, 319.98, 1);
+    @include adaptiveValue("width", 800, 300, 991.98, 319.98, 1);
     font-weight: 700;
     line-height: math.div(23, 26);
     text-align: center;
 
     margin-bottom: 30px;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 10px;
+    }
   }
 
   // .terms__body
@@ -57,6 +74,8 @@
   // .terms__card
 
   &__card {
+    filter: drop-shadow(0px 39px 36px rgba(0, 0, 0, 0.19));
+
     @media (max-width: 1319px) {
       width: 540px !important;
     }

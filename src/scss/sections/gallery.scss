@@ -1,6 +1,11 @@
 .gallery {
   padding-top: 50px;
   padding-bottom: 80px;
+
+  @media (max-width: $tablet) {
+    padding-top: 26px;
+    padding-bottom: 30px;
+  }
   // .gallery__container
 
   &__container {
@@ -14,12 +19,17 @@
 
   &__title {
     margin-bottom: 86px;
+    @media (max-width: $tablet) {
+      margin-bottom: 16px;
+    }
   }
 
   // .gallery__photo
 
   &__photo {
+    filter: drop-shadow(0px 39px 36px rgba(0, 0, 0, 0.19));
     width: 1000px;
+    border-radius: 10px;
     @media (max-width: 1300px) {
       width: 500px;
     }
@@ -39,8 +49,6 @@
     @media (max-width: $mobileSmall) {
       width: 320px;
     }
-
-   
   }
 }
 .section {
@@ -55,7 +63,5 @@
   }
 }
 
-
 .lg-image {
-  border-radius: 10px !important;
 }

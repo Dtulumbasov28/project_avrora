@@ -1,7 +1,13 @@
 .team {
-  background-color: #f3f3f3;
   padding-top: 158px;
   padding-bottom: 1px;
+  background-color: #f3f3f3;
+  border-radius: 30px 30px 0px 0px;
+
+  @media (max-width: $tablet) {
+    padding-top: 40px;
+  }
+
   // .team__container
 
   &__container {
@@ -11,17 +17,26 @@
     align-items: center;
     position: relative;
     margin-bottom: 156px;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 30px;
+    }
   }
 
   // .team__title-left
 
   &__title-left {
     top: -110px;
+    @media (max-width: $tablet) {
+      top: -26px;
+    }
   }
 
   // .team__cards
 
   &__cards {
+    filter: drop-shadow(0px 39px 36px rgba(0, 0, 0, 0.19));
+
     width: 1000px;
     @media (max-width: 1299px) {
       width: 750px;
@@ -114,4 +129,3 @@
   &__decor {
   }
 }
-

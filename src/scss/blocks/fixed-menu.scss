@@ -8,9 +8,9 @@
   position: fixed;
   top: 0;
   height: 100%;
-  background-color: $mainColorBlue;
-  border-radius: 0px 30px 30px 0px;
   padding: 40px 0px 30px 0px;
+  background-color: $mainColorBlue;
+  border-radius: 0px 30px 0px 0px;
 
   display: flex;
   flex-direction: column;
@@ -21,8 +21,7 @@
   font-weight: 700;
   color: #fff;
 
-  @media (max-height: 920px) {
-    padding: 0px 40px 0px 0px;
+  @media (max-height: $tablet) {
 
     & .fixed-menu__list {
       gap: 14px;
@@ -33,7 +32,7 @@
   }
 
   @media (max-width: $tablet) {
-    @include adaptiveValue("height", 134, 60, 991.98, 319.98, 1);
+    @include adaptiveValue("height", 114, 60, 991.98, 319.98, 1);
 
     top: 0;
     left: 0;
@@ -48,8 +47,8 @@
 
   &__logo {
     @media (max-width: $tablet) {
-      @include adaptiveValue("width", 96, 50, 991.98, 319.98, 1);
-      @include adaptiveValue("height", 120, 80, 991.98, 319.98, 1);
+      @include adaptiveValue("width", 76, 50, 991.98, 319.98, 1);
+      @include adaptiveValue("height", 100, 80, 991.98, 319.98, 1);
 
       width: 96px;
       height: 120px;
@@ -116,11 +115,6 @@
     }
   }
 
-  // .fixed-menu__link
-
-  &__link {
-  }
-
   // .fixed-menu__socials
 
   &__socials {
@@ -128,7 +122,7 @@
     justify-content: space-between;
     width: 100%;
     max-width: 50rem;
-    padding: 0 1.5rem;
+    padding: 1.5rem 1.5rem;
 
     @media (max-width: $tablet) {
       justify-content: center;
