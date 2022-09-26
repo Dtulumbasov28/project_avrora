@@ -21,10 +21,11 @@
   font-weight: 700;
   color: #fff;
 
-  @media (max-height: $tablet) {
+  @media (min-height: $tablet) {
 
     & .fixed-menu__list {
-      gap: 14px;
+      margin-top: 60px;
+      gap: 20px;
     }
     & .fixed-menu__decor {
       display: none;
@@ -84,7 +85,6 @@
 
   &__decor {
     width: 110px;
-    min-height: 40px;
 
     &--two {
       transform: rotate(180deg);

@@ -60,6 +60,10 @@ body::after {
   .lock & {
     visibility: visible;
   }
+
+  @media (max-width: $mobileSmall) {
+    padding: 20px 10px;
+  }
 }
 .popup__content-reviews {
   padding: 4px;
@@ -98,6 +102,11 @@ body::after {
   font-weight: 700;
   font-size: 14px;
   margin-bottom: 50px;
+
+  @media (max-width: $mobileSmall) {
+    margin-bottom: 30px;
+
+  }
 }
 .popup__button {
   cursor: pointer;
@@ -123,22 +132,14 @@ body::after {
   padding: 2px 30px;
   margin-bottom: 30px;
 
-  &:focus::-webkit-input-placeholder {
-    color: transparent;
+  @media (max-width: $mobileSmall) {
+    margin-bottom: 20px;
   }
-  &:focus::-moz-placeholder {
-    color: transparent;
-  }
-  &:focus:-moz-placeholder {
-    color: transparent;
-  }
-  &:focus:-ms-input-placeholder {
-    color: transparent;
-  }
+
+
 
   &:focus {
     border-color: $mainColorBrown;
-
     outline: none;
   }
 }

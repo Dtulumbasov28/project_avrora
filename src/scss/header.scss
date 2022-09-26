@@ -36,6 +36,7 @@
 
   &__menu {
     display: flex;
+    justify-content: center;
     gap: 26px;
 
     margin-bottom: 18px;
@@ -347,6 +348,7 @@
   top: 40px;
   bottom: auto;
   box-sizing: border-box;
+  font-weight: 400;
 
   background-color: #fff;
   border-radius: 30px;

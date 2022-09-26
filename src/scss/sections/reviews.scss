@@ -35,7 +35,7 @@
     @media (max-width: $mobile) {
       width: 500px;
     }
-    @media (max-width: 520px) {
+    @media (max-width: $mobileSmall) {
       width: 320px;
     }
   }

@@ -44,6 +44,9 @@
     @media (max-width: 670px) {
       width: 330px;
     }
+    @media (max-width: $mobileSmall) {
+      width: 300px;
+    }
     &:last-child {
       margin-bottom: 28px;
     }

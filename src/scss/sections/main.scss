@@ -11,7 +11,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 
     @media (max-width: $tablet) {
       align-items: center;
@@ -37,7 +37,6 @@
 
   &__content {
     @include adaptiveValue("width", 410, 260, 991.98, 319.98, 1);
-    @include adaptiveValue("padding-top", 120, 10, 991.98, 479.98, 1);
     @include adaptiveValue("padding-left", 32, 16, 991.98, 319.98, 1);
     @include adaptiveValue("padding-right", 46, 0, 991.98, 319.98, 1);
 
@@ -46,7 +45,7 @@
     top: 0;
     left: 0;
     height: 487px;
-    padding: 120px 32px 0px 46px;
+    padding: 40px 32px 0px 46px;
 
     display: flex;
     flex-direction: column;

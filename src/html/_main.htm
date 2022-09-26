@@ -1,5 +1,5 @@
 <div class="fixed-menu" data-da=".menu-header,991.98,0">
-	<a href="#" class="fixed-menu__logo">
+	<a href="#"  data-goto=".main" class="fixed-menu__logo">
 		<svg class="fixed-menu__icon">
 			<use xlink:href="@img/icons/icons.svg#svg-logo"></use>
 		</svg>
@@ -10,34 +10,37 @@
 	<nav class="fixed-menu__body">
 		<ul class="fixed-menu__list" data-da=".burger__body,991.98,0">
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link">О КЛИНИКЕ АВРОРА</a>
+				<a  href="#" data-goto=".about"  class="fixed-menu__link">О КЛИНИКЕ АВРОРА</a>
 			</li>
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link">КОМПЛЕКСНАЯ СИНЕРГИЧНАЯ ПРОГРАММА</a>
+				<a href="#" data-goto=".about__title"  class="fixed-menu__link">КОМПЛЕКСНАЯ СИНЕРГИЧНАЯ ПРОГРАММА</a>
 			</li>
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link">ЭТАПЫ ЛЕЧЕНИЯ</a>
+				<a href="#" data-goto=".tabs__title"  class="fixed-menu__link">ЭТАПЫ ЛЕЧЕНИЯ</a>
 			</li>
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link">СЕРВИС И УСЛОВИЯ </a>
+				<a href="#" data-goto=".terms__subtitle"  class="fixed-menu__link">СЕРВИС И УСЛОВИЯ </a>
 			</li>
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link">ПРЕИМУЩЕСТВА НАШЕЙ КЛИНИКИ</a>
+				<a  href="#" data-goto=".benefits"  class="fixed-menu__link">ПРЕИМУЩЕСТВА НАШЕЙ КЛИНИКИ</a>
 			</li>
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link">КОМАНДА СПЕЦИАЛИСТОВ</a>
+				<a href="#"  data-goto=".team" class="fixed-menu__link">КОМАНДА СПЕЦИАЛИСТОВ</a>
 			</li>
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link">ДОКУМЕНТЫ И ЛИЦЕНЗИИ</a>
+				<a href="#"  data-goto=".documents" class="fixed-menu__link">ДОКУМЕНТЫ И ЛИЦЕНЗИИ</a>
 			</li>
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link">ГАЛЕРЕЯ</a>
+				<a href="#"  data-goto=".gallery" class="fixed-menu__link">ГАЛЕРЕЯ</a>
 			</li>
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link">ОТЗЫВЫ КЛИЕНТОВ </a>
+				<a href="#"  data-goto=".reviews" class="fixed-menu__link">ОТЗЫВЫ КЛИЕНТОВ </a>
 			</li>
 			<li class="fixed-menu__item">
-				<a href="#" class="fixed-menu__link">КОНТАКТЫ</a>
+				<a href="#"  data-goto=".questions" class="fixed-menu__link">ВОПРОСЫ И ОТВЕТЫ </a>
+			</li>
+			<li class="fixed-menu__item">
+				<a href="#" data-goto=".map" class="fixed-menu__link">КОНТАКТЫ</a>
 			</li>
 		</ul>
 	</nav> 
@@ -110,7 +113,7 @@
 						<span>Комплексность.</span>
 						<span>Комфорт.</span>
 					</div>
-					<button class="content-swiper__button button__transparent">
+					<button data-popup="#popup-call" class="content-swiper__button button__transparent">
 						КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА
 					</button>
 				</div>
@@ -118,15 +121,15 @@
 				<div class="main__wrapper swiper-wrapper">
 					<!-- Слайд -->
 					<div class="main__slide swiper-slide">
-						<img src="@img/slide.jpg" alt="" />
+						<img class="main__slide-img" src="@img/slide.png" alt="" />
 					</div>
 
 					<div class="main__slide swiper-slide">
-						<img src="@img/slide2.jpg" alt="" />
+						<img class="main__slide-img" src="@img/slide2.jpg" alt="" />
 					</div>
 
 					<div class="main__slide swiper-slide">
-						<img src="@img/slide.jpg" alt="" />
+						<img class="main__slide-img" src="@img/slide.png" alt="" />
 					</div>
 				</div>
 				<!-- Если нужна пагинация -->
@@ -559,7 +562,7 @@
 						</button>
 					</li>
 					<li>
-						<button type="button" class="stages-tabs__title tabs__title">
+						<button  type="button" class="stages-tabs__title tabs__title">
 							02. Сбор информации и первичная консультация
 						</button>
 					</li>
@@ -1359,10 +1362,19 @@
 			</div>
 			<div class="gallery__photo swiper">
 				<div class="gallery__wrapper swiper-wrapper">
-					<img class="gallery__img swiper-slide" src="@img/slide_gallery.jpg" alt="" />
-					<img class="gallery__img swiper-slide" src="@img/slide_gallery.jpg" alt="" />
-					<img class="gallery__img swiper-slide" src="@img/slide_gallery.jpg" alt="" />
-					<img class="gallery__img swiper-slide" src="@img/slide_gallery.jpg" alt="" />
+					<div class="gallery__img swiper-slide">
+						<img  src="@img/slide_gallery.jpg" alt="" />
+					</div>
+					<div class="gallery__img swiper-slide">
+						<img  src="@img/slide_gallery.jpg" alt="" />
+					</div>
+					<div class="gallery__img swiper-slide">
+						<img  src="@img/slide_gallery.jpg" alt="" />
+					</div>
+					<div class="gallery__img swiper-slide">
+						<img  src="@img/slide_gallery.jpg" alt="" />
+					</div>
+
 
 				</div>
 			</div>
@@ -1667,7 +1679,7 @@
 					<div class="content-map__email">
 						Электронная почта: <br />info@premium-practice.vip
 					</div>
-					<button type="button" class="content-map__button button__transparent">
+					<button data-popup="#popup-call" type="button" class="content-map__button button__transparent">
 						ЗАПЛАНИРОВАТЬ КОНСУЛЬТАЦИЮ
 					</button>
 				</div>
