@@ -27,6 +27,7 @@
 
   &__title-left {
     top: -110px;
+
     @media (max-width: $tablet) {
       top: -26px;
     }
@@ -36,14 +37,16 @@
 
   &__cards {
     filter: drop-shadow(0px 39px 36px rgba(0, 0, 0, 0.19));
-
     width: 1000px;
+
     @media (max-width: 1299px) {
       width: 750px;
     }
+
     @media (max-width: 759px) {
       width: 500px;
     }
+
     @media (max-width: $mobileSmall) {
       width: 250px;
     }
@@ -53,19 +56,19 @@
 
   &__card {
     border-color: $mainColorBlue;
-
     width: 240px;
 
     &:hover {
       & .card__text {
         font-weight: 700;
       }
+		
       & .card__desc {
         font-weight: 700;
       }
+
       & .card__icon-team {
         transition: fill 0.4s;
-
         fill: $mainColorBrown;
       }
 
@@ -73,17 +76,7 @@
     }
   }
 }
-.section {
-  // .section__title-left
 
-  &__title-left {
-  }
-
-  // .section__decor
-
-  &__decor {
-  }
-}
 .card {
   // .card__image
 
@@ -122,11 +115,5 @@
   &__desc {
     text-align: center !important;
     padding: 0px 26px;
-  }
-}
-.benefits {
-  // .benefits__decor
-
-  &__decor {
   }
 }

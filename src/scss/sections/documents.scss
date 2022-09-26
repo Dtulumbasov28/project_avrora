@@ -22,6 +22,7 @@
 
   &__title-left {
     top: -110px;
+
     @media (max-width: $tablet) {
       top: -26px;
     }
@@ -49,7 +50,6 @@
 
   &__card {
     border-radius: 10px;
-
     position: relative;
 
     &:hover {
@@ -79,12 +79,4 @@
       height: 100%;
     }
   }
-}
-.section {
-  // .section__title-left
-
-  &__title-left {
-  }
-}
-.card {
 }

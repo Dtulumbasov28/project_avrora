@@ -6,7 +6,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     padding-top: 48px;
 
     @media (max-width: $tablet) {
@@ -25,20 +24,13 @@
   &__wrapper {
     margin-top: 110px;
     position: relative;
-    // @include adaptiveValue("width", 1800, 330, 1920, 991.98, 1);
     @include adaptiveValue("height", 600, 400, 1920, 319.98, 1);
-
     width: 90%;
     border-radius: 50px;
 
     @media (max-width: $tablet) {
       margin-top: 60px;
     }
-  }
-
-  // .map__content
-
-  &__content {
   }
 
   // .map__body
@@ -77,12 +69,6 @@
     line-height: 1;
     border: 3px solid #ffffff;
     color: #fff;
-  }
-}
-.section {
-  // .section__title-left
-
-  &__title-left {
   }
 }
 .content-map {
@@ -230,14 +216,12 @@
   }
 }
 
+
+// Удалить все виджеты с карты
 [class*="copyrights-pane"] {
   display: none !important;
 }
 
-.content-map {
-}
-.button {
-}
 .ymaps-2-1-79-inner-panes {
   border-radius: 50px !important;
   @media (max-width: $mobileSmall) {

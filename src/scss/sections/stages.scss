@@ -20,11 +20,11 @@
   // .stages__text
 
   &__text {
+	  @include adaptiveValue("margin-left", 20, 100, 1920, 991.98, 1);
+
     position: relative;
     font-weight: 200;
     width: 70%;
-    @include adaptiveValue("margin-left", 20, 100, 1920, 991.98, 1);
-
     margin-top: 60px;
     margin-bottom: 65px;
 
@@ -59,12 +59,8 @@
     width: 100%;
   }
 }
-.section {
-  // .section__title-left
+  // .stages-tab__title
 
-  &__title-left {
-  }
-}
 .stages-tabs__title {
   @include adaptiveValue("font-size", 18, 14, 1920, 479.98, 1);
 
@@ -74,10 +70,14 @@
   text-align: start;
   letter-spacing: 0.7px;
   transition: color 0.4s;
+
   &:hover {
     color: $mainColorBrown;
   }
 }
+
+  // .stages-tabs__subtitle
+
 .stages-tabs__subtitle {
   font-size: 20px;
   font-family: $fontFamilyPlayfair;
@@ -86,6 +86,7 @@
   margin-top: 10px;
   margin-bottom: 32px;
 }
+
 .tabs {
   // .tabs__navigation
 
@@ -113,15 +114,6 @@
       color: $mainColorBrown;
     }
   }
-  // .tabs__subtitle
-  &__subtitle {
-    // font-size: 20px;
-    // font-family: $fontFamilyPlayfair;
-    // font-weight: 700;
-    // color: $mainColorBrown;
-    // margin-top: 10px;
-    // margin-bottom: 32px;
-  }
 
   // .tabs__content
 
@@ -148,10 +140,12 @@
         content: url("../../img/decor_tabs.png");
         position: absolute;
       }
+
       &::before {
         bottom: -46px;
         left: -46px;
       }
+
       &::after {
         transform: rotate(180deg);
         top: -46px;
@@ -165,9 +159,11 @@
   &__body {
     overflow: hidden;
     position: relative;
+
     & span {
       line-height: math.div(20, 16);
     }
+
     @media (max-width: 1300px) {
       &::before,
       &::after {
@@ -176,10 +172,12 @@
         content: url("../../img/decor_tabs.png");
         position: absolute;
       }
+
       &::before {
         bottom: -46px;
         left: -46px;
       }
+
       &::after {
         transform: rotate(180deg);
         top: -46px;
@@ -203,10 +201,6 @@
 }
 
 .stages-spollers {
-  // .stages-spollers__list
-
-  &__list {
-  }
 
   // .stages-spollers__item
 
@@ -219,7 +213,6 @@
 
   &__buttton {
     @include adaptiveValue("font-size", 18, 14, 767.98, 319.98, 1);
-
     margin-bottom: 12px;
   }
 
@@ -235,9 +228,11 @@
     padding: 10px 20px;
     box-shadow: 0 0 10px rgb(131 131 131 / 50%);
     margin-bottom: 8px;
+
     @media (max-width: $mobileSmall) {
       padding: 10px;
     }
+
     @media (min-width: $mobile) {
       display: none;
     }
@@ -257,6 +252,7 @@
 }
 
 ._tab-spoller {
+
   & .tabs__navigation {
     display: none;
   }
@@ -271,19 +267,20 @@
     box-shadow: none;
     background-color: transparent;
   }
+
   & .tabs__body {
+	  @include adaptiveValue("width", 460, 280, 1300.98, 319.98, 1);
     margin-bottom: 10px;
-    @include adaptiveValue("width", 460, 280, 1300.98, 319.98, 1);
     border-radius: 30px;
     padding: 10px 20px;
     background-color: #fff;
-
     box-shadow: 0 0 10px rgb(131 131 131 / 50%);
 
     & span {
       @include adaptiveValue("font-size", 16, 12, 1920, 319.98, 1);
     }
   }
+  
   & li {
     &::marker {
       content: none;

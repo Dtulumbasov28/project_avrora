@@ -1,8 +1,10 @@
 .benefits {
   padding-bottom: 106px;
+
   @media (max-width: $tablet) {
     padding-bottom: 20px;
   }
+
   // .benefits__container
 
   &__container {
@@ -175,22 +177,12 @@
     }
   }
 }
-.benefits {
-  // .benefits__card
 
-  &__card {
-  }
-}
 .benefits-card {
   // .benefits-card__block
 
   &__block {
     margin-bottom: 10px;
-  }
-
-  // .benefits-card__icon
-
-  &__icon {
   }
 
   // .benefits-card__title

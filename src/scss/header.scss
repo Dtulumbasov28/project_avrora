@@ -2,7 +2,6 @@
 .header {
   @include adaptiveValue("margin-left", 400, 280, 1920, 991.98, 2);
 
-
   margin-top: 30px;
   position: relative;
   font-weight: 700;
@@ -14,39 +13,22 @@
   @media (max-width: $mobileSmall) {
   }
 
-  //   &::before {
-  //     z-index: 2;
-  //     content: "";
-  //     position: absolute;
-  //     top: 20px;
-  //     width: 100%;
-  //     border: 2px solid #bd1900;
-
-  //     @media (max-width: $tablet) {
-  //       display: none;
-  //     }
-  //   }
-
-  // .header__container
-
-  &__container {
-  }
-
   // .header__menu
 
   &__menu {
     display: flex;
     justify-content: center;
     gap: 26px;
-
     margin-bottom: 18px;
 
     @media (max-width: $tablet) {
       @include adaptiveValue("margin-top", 100, 46, 991.98, 319.98, 1);
     }
+
     @media (max-width: 1300px) {
       flex-direction: column-reverse;
     }
+
     @media (max-width: $mobile) {
       flex-direction: column-reverse;
     }
@@ -70,10 +52,10 @@
     gap: 14px;
 
     @media (max-width: $tablet) {
-      gap: 10px;
-
       justify-content: space-around;
+      gap: 10px;
     }
+
     @media (max-width: $mobileSmall) {
       gap: 4px;
     }
@@ -94,6 +76,7 @@
     @media (max-width: $tablet) {
       margin-bottom: 12px;
     }
+
     @media (max-width: $mobile) {
       display: none;
     }
@@ -113,11 +96,6 @@
     }
   }
 
-  // .menu-header__contacts
-
-  &__contacts {
-  }
-
   // .menu-header__button
 
   &__button {
@@ -129,6 +107,7 @@
       justify-content: space-around;
       line-height: math.div(10, 14);
     }
+
     @media (max-width: $mobileSmall) {
       padding: 5px !important;
     }
@@ -150,7 +129,7 @@
 
       & .contacts__icon {
         transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
-		  scale: 1.2;
+        scale: 1.2;
         fill: $mainColorBrown;
       }
     }
@@ -175,6 +154,7 @@
     @media (max-width: $tablet) {
       fill: $mainColorBrown;
     }
+
     @media (max-width: $mobile) {
       display: none;
     }
@@ -186,10 +166,10 @@
     @media (max-width: $tablet) {
       color: $mainColorBrown;
       font-family: $fontFamilyJost;
-      &:hover {
-        transition: color 0.4s;
 
+      &:hover {
         color: #fff;
+        transition: color 0.4s;
       }
     }
   }
@@ -204,6 +184,7 @@
     @media (max-width: $tablet) {
       color: $mainColorBrown;
     }
+
     @media (max-width: $mobile) {
       display: none;
     }
@@ -222,22 +203,8 @@
       }
     }
   }
-
-  // .contacts__telegram
-
-  &__telegram {
-  }
-
-  // .contacts__whatsapp
-
-  &__whatsapp {
-  }
-
-  // .contacts__viber
-
-  &__viber {
-  }
 }
+
 .button {
   // .button__brown
 
@@ -263,6 +230,7 @@
       border-radius: 50%;
       background-color: $mainColorBrown;
       transition: all 0.2s ease-out;
+
       & svg {
         width: 16px;
         height: 16px;
@@ -276,7 +244,7 @@
   }
 }
 
-//====================================================================================================
+//============================ Анимация кнопок
 
 .button__transparent {
   padding: 8px 10px;
@@ -336,6 +304,7 @@
   from {
     transform: translateX(-1em);
   }
+
   to {
     transform: translateX(12.5em);
     animation-timing-function: ease-out;

@@ -69,3 +69,19 @@
     width: auto !important;
   }
 }
+
+// Кнопки
+
+.button-next {
+	transform: rotate(180deg);
+ }
+ 
+ .button-next,
+ .button-prev {
+	width: 26px;
+	height: 26px;
+	z-index: 10;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+ }
