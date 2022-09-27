@@ -28,7 +28,7 @@
 
   // .terms__subtitle
 
-  &__subtitle {
+  &__subtitle {width: 100%;
     line-height: math.div(27, 20);
     margin-bottom: 40px;
 
@@ -40,13 +40,15 @@
   // .terms__desc
 
   &__desc {
-    @include adaptiveValue("font-size", 16, 14, 1920, 319.98, 1);
-    @include adaptiveValue("width", 1000, 300, 991.98, 319.98, 1);
-    font-weight: 700;
+  
+    @include adaptiveValue("font-size", 20, 12, 1920, 319.98, 1);
+
+    margin-bottom: 34px;
+
+
     line-height: math.div(23, 26);
     text-align: center;
 
-    margin-bottom: 30px;
 
     @media (max-width: $tablet) {
       margin-bottom: 10px;

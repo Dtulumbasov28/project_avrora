@@ -23,7 +23,7 @@
     @include adaptiveValue("width", 410, 260, 991.98, 319.98, 1);
     @include adaptiveValue("padding-left", 32, 16, 991.98, 319.98, 1);
     @include adaptiveValue("padding-right", 46, 0, 991.98, 319.98, 1);
-    @include adaptiveValue("padding-top", 100, 6, 1660, 319.98, 1);
+    @include adaptiveValue("padding-top", 100, 6, 1660, 991.98, 1);
 
     z-index: 2;
     position: absolute;
@@ -234,7 +234,7 @@
   // .content-swiper__title
 
   &__title {
-    @include adaptiveValue("font-size", 28, 14, 991.98, 319.98, 1);
+    @include adaptiveValue("font-size", 28, 14, 1399.98, 319.98, 1);
     @include adaptiveValue("margin-bottom", 26, 16, 767.98, 319.98, 1);
 
     position: relative;
