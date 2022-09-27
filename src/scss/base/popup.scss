@@ -76,6 +76,10 @@ body::after {
     }
   }
 }
+.popup__content-politic {
+  width: 80% ;
+  background-color: #fff;
+}
 .popup__title {
   color: $mainColorBrown;
   font-size: 32px;

@@ -492,7 +492,10 @@ function initSliders() {
         pauseOnMouseEnter: true,
       },
       breakpoints: {
-        1300: {
+        1920: {
+          slidesPerView: 5,
+        },
+        1359: {
           slidesPerView: 4,
         },
         760: {
@@ -589,8 +592,11 @@ function initSliders() {
         pauseOnMouseEnter: true,
       },
       breakpoints: {
-        1300: {
+        1359: {
           slidesPerView: 2,
+        },
+        1920: {
+          slidesPerView: 3,
         },
       },
       observer: true,
@@ -600,7 +606,7 @@ function initSliders() {
       // промежуток между слайдами
       spaceBetween: 12,
       // бесконечная прокрутка
-      loop: false,
+      loop: true,
       // скорость прокрутки
       speed: 800,
       // отключение возможности прокрутки слайдера мышью
@@ -680,8 +686,11 @@ function initSliders() {
         pauseOnMouseEnter: true,
       },
       breakpoints: {
-        1300: {
+        1359: {
           slidesPerView: 2,
+        },
+        1920: {
+          slidesPerView: 3,
         },
       },
       observer: true,
@@ -691,7 +700,7 @@ function initSliders() {
       // промежуток между слайдами
       spaceBetween: 10,
       // бесконечная прокрутка
-      loop: false,
+      loop: true,
       // скорость прокрутки
       speed: 800,
       // отключение возможности прокрутки слайдера мышью

@@ -28,18 +28,22 @@
   // .gallery__photo
 
   &__photo {
-	  width: 1000px;
-	  border-radius: 10px;
-	  filter: drop-shadow(0px 39px 36px rgba(0, 0, 0, 0.19));
+    width: 1400px;
+    border-radius: 10px;
+    filter: drop-shadow(0px 39px 36px rgba(0, 0, 0, 0.19));
 
-    @media (max-width: 1300px) {
-      width: 500px;
+    @media (max-width: 1920px) {
+      width: 1000px;
     }
-
+    @media (max-width: 1359px) {
+      width: 700px;
+    }
+    @media (max-width: $mobile) {
+      width: 400px;
+    }
     @media (max-width: $mobileSmall) {
       width: 300px;
     }
-
     & img {
       width: 100%;
       height: 100%;

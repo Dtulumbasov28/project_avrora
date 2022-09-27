@@ -13,7 +13,6 @@
   &__container {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     position: relative;
   }
@@ -33,13 +32,22 @@
   &__cards {
     filter: drop-shadow(0px 39px 36px rgba(0, 0, 0, 0.19));
 
-    width: 1000px;
+    width: 1400px;
     display: flex;
     justify-content: center;
     gap: 12px;
 
-    @media (max-width: 1300px) {
-      width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 1920px) {
+      width: 1000px;
+    }
+    @media (max-width: 1359px) {
+      width: 700px;
+    }
+    @media (max-width: $mobile) {
+      width: 400px;
     }
     @media (max-width: $mobileSmall) {
       width: 300px;

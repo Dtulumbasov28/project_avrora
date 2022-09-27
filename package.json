@@ -1,7 +1,9 @@
 {
 	"name": "project-avrora",
+	"homepage": "https://dtulumbasov28.github.io/project_avrora",
 	"version": "3.0.0",
 	"description": "Start template with Gulp and Webpack",
+
 	"author": "FLS",
 	"private": true,
 	"license": "",

@@ -14,52 +14,54 @@
   &__container {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   // .stages__text
 
   &__text {
-	  @include adaptiveValue("margin-left", 20, 100, 1920, 991.98, 1);
-
+    margin-left: 160px;
     position: relative;
     font-weight: 200;
-    width: 70%;
-    margin-top: 60px;
+
     margin-bottom: 65px;
 
-    @media (max-width: $tablet) {
+    @media (max-width: 1433px) {
       width: 100%;
       margin-left: 0;
-      margin-top: 40px;
       margin-bottom: 40px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -30px;
-      left: 0;
-      width: 100%;
-      border: 2px solid $mainColorGrey;
-      border-radius: 20px;
-
-      @media (max-width: $tablet) {
-        bottom: -20px;
-      }
+      margin-top: 40px;
     }
   }
 
   // .stages__body
 
   &__body {
+    position: relative;
+    margin-left: 160px;
     display: flex;
-    justify-content: center;
     gap: 20px;
-    width: 100%;
+
+    @media (max-width: 1299px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -30px;
+      left: 0;
+      width: 100%;
+      border: 2px solid $mainColorGrey;
+      border-radius: 20px;
+
+      @media (max-width: $tablet) {
+        top: -20px;
+      }
+    }
   }
 }
-  // .stages-tab__title
+// .stages-tab__title
 
 .stages-tabs__title {
   @include adaptiveValue("font-size", 18, 14, 1920, 479.98, 1);
@@ -74,9 +76,41 @@
   &:hover {
     color: $mainColorBrown;
   }
+  position: relative;
+  @include adaptiveValue("font-size", 18, 16, 1300.98, 767.98, 1);
+
+  &::after {
+    display: block;
+    position: absolute;
+    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+    width: 0; /*задаём длинну линии до наведения курсора*/
+    height: 1px; /*задаём ширину линии*/
+    background-color: $mainColorBrown; /*задаём цвет линии*/
+    content: "";
+    transition: width 0.5s ease-out; /*задаём время анимации*/
+  }
+  &::before {
+    content: url("../../img/decor_qualities.svg");
+    position: absolute;
+    left: -50px;
+    opacity: 0;
+    display: none;
+    transition: opacity 0.5s;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+    }
+    &::before {
+      display: block;
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
+  }
 }
 
-  // .stages-tabs__subtitle
+// .stages-tabs__subtitle
 
 .stages-tabs__subtitle {
   font-size: 20px;
@@ -201,7 +235,6 @@
 }
 
 .stages-spollers {
-
   // .stages-spollers__item
 
   &__item {
@@ -252,7 +285,6 @@
 }
 
 ._tab-spoller {
-
   & .tabs__navigation {
     display: none;
   }
@@ -269,7 +301,7 @@
   }
 
   & .tabs__body {
-	  @include adaptiveValue("width", 460, 280, 1300.98, 319.98, 1);
+    @include adaptiveValue("width", 460, 280, 1300.98, 319.98, 1);
     margin-bottom: 10px;
     border-radius: 30px;
     padding: 10px 20px;
@@ -280,7 +312,7 @@
       @include adaptiveValue("font-size", 16, 12, 1920, 319.98, 1);
     }
   }
-  
+
   & li {
     &::marker {
       content: none;

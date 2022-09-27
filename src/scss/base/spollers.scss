@@ -3,7 +3,7 @@
 
 // Блок со спойлерами
 .spollers {
-  @include adaptiveValue("width", 810, 200, 1200, 319.98, 1);
+  @include adaptiveValue("width", 1200, 200, 1900, 319.98, 1);
 
   @media (max-width: $tablet) {
     margin-left: 0px;
@@ -77,7 +77,7 @@
   &::after {
     content: url(@img/decor-more.svg);
     position: absolute;
-    left: 106%;
+    left: 125%;
     top: 1px;
   }
 }

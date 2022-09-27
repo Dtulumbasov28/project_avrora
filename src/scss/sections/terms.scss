@@ -41,7 +41,7 @@
 
   &__desc {
     @include adaptiveValue("font-size", 16, 14, 1920, 319.98, 1);
-    @include adaptiveValue("width", 800, 300, 991.98, 319.98, 1);
+    @include adaptiveValue("width", 1000, 300, 991.98, 319.98, 1);
     font-weight: 700;
     line-height: math.div(23, 26);
     text-align: center;
@@ -152,7 +152,7 @@
     font-family: $fontFamilyPlayfair;
     font-weight: 400;
 
-    padding: 20px 40px;
+    padding: 20px 20px;
 
     border-radius: 10px;
     background: #fff;

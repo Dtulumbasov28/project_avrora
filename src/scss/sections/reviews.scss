@@ -9,7 +9,6 @@
 
   &__container {
     display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: center;
     position: relative;
@@ -28,10 +27,17 @@
   // .reviews__body
 
   &__body {
-    width: 810px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
 
-    @media (max-width: 1150px) {
-      width: 700px;
+    @media (min-width: $pc) {
+     margin-right: auto;
+    }
+
+    @media (max-width: 1299px) {
+      width: 100%;
+
     }
     @media (max-width: $mobile) {
       width: 500px;
@@ -110,4 +116,8 @@
       column-count: auto;
     }
   }
+}
+.reviews-decor {
+  left: -200px;
+  bottom: 0;
 }

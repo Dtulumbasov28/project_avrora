@@ -9,8 +9,8 @@
     @media (max-width: $tablet) {
       border-radius: 10px;
     }
-
-    @include adaptiveValue("width", 989, 700, 1500, 991.98, 1);
+    width: 100%;
+    // @include adaptiveValue("width", 989, 700, 1500, 991.98, 1);
     margin-left: 0 !important;
     margin-right: 0 !important;
 
@@ -21,6 +21,9 @@
     }
   }
 }
+// .main__wrapper {
+//   height: 100% !important;
+// }
 .main__slide-img {
   @media (max-width: $tablet) {
     height: 100%;
@@ -63,8 +66,7 @@
   opacity: 1 !important;
 }
 
-
-.swiper-pagination  {
+.swiper-pagination {
   @media (max-width: $tablet) {
     width: auto !important;
   }
@@ -73,15 +75,20 @@
 // Кнопки
 
 .button-next {
-	transform: rotate(180deg);
- }
- 
- .button-next,
- .button-prev {
-	width: 26px;
-	height: 26px;
-	z-index: 10;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
- }
+  transform: rotate(180deg);
+}
+
+.button-next,
+.button-prev {
+  width: 26px;
+  height: 26px;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.main__slider img {
+  width: 100% !important;
+  object-fit: cover !important;
+}

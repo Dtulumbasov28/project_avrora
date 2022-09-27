@@ -12,6 +12,7 @@
   }
   @media (max-width: $mobileSmall) {
   }
+ 
 
   // .header__menu
 
@@ -59,6 +60,7 @@
     @media (max-width: $mobileSmall) {
       gap: 4px;
     }
+  
   }
 
   // .menu-header__item
@@ -99,7 +101,7 @@
   // .menu-header__button
 
   &__button {
-    @include adaptiveValue("font-size", 14, 10, 991.98, 319.98, 1);
+    @include adaptiveValue("font-size", 16, 10, 1660, 319.98, 1);
     width: auto;
     line-height: 1;
 
