@@ -38,7 +38,7 @@
     background: rgba(0, 114, 187, 0.3);
 
     @media (min-width: $pc) {
-      gap: 30px ;
+      gap: 30px;
     }
   }
 
@@ -63,6 +63,11 @@
 
       width: calc(100% / 4);
       padding: 16px 32px;
+
+      @media (max-width: 1359px) {
+        gap: 24px;
+        padding: 24px 32px;
+      }
 
       &:first-child {
         border-radius: 20px 0px 0px 20px;
@@ -110,7 +115,6 @@
         }
       }
 
-      @include adaptiveValue("font-size", 1, 12, 991.98, 319.98, 1);
       line-height: math.div(13, 14);
     }
 
@@ -128,6 +132,11 @@
       font-weight: 700;
     }
 
+    // .main-spollers__body
+
+    &__body {
+      // padding: 2px 0px;
+    }
     // .main-spollers__body-title
 
     &__body-title {

@@ -12,6 +12,17 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
+
+    &::before {
+      content: url("../../img/decor_background.png");
+      position: absolute;
+      left: -100px;
+      bottom: 0;
+
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
   }
 
   // .reviews__title-left
@@ -32,12 +43,11 @@
     width: 900px;
 
     @media (min-width: $pc) {
-     margin-right: auto;
+      margin-right: auto;
     }
 
     @media (max-width: 1299px) {
       width: 100%;
-
     }
     @media (max-width: $mobile) {
       width: 500px;
@@ -116,8 +126,4 @@
       column-count: auto;
     }
   }
-}
-.reviews-decor {
-  left: -200px;
-  bottom: 0;
 }

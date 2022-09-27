@@ -40,6 +40,18 @@
     flex-direction: row;
   }
 
+  &::before {
+    content: url("../../img/decor__background-benefits.png");
+    position: absolute;
+    transform: scale(-1, 1);
+    bottom: 240px;
+    right: -230px;
+	 
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
   // .fixed-menu__logo
 
   &__logo {
@@ -124,15 +136,5 @@
       justify-content: center;
       gap: 30px;
     }
-  }
-}
-.fixed-decor {
-  height: 300px;
-  transform: scale(-1, 1);
-  bottom: 100px;
-  right: -340px;
-
-  @media (max-width: $tablet) {
-    display: none;
   }
 }

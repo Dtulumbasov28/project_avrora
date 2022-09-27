@@ -10,6 +10,17 @@
   &__container {
     display: flex;
     flex-direction: column;
+
+    &::before {
+      content: url("../../img/decor_background.png");
+      position: absolute;
+      transform: scale(-1, 1);
+      right: 0;
+		
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
   }
 
   // .about__title
@@ -125,7 +136,6 @@
     margin-bottom: 14px;
     @include adaptiveValue("width", 1600, 1000, 2500, 1359.98, 1);
 
-  
     @media (max-width: 1359.98px) {
       width: 750px;
     }
@@ -238,8 +248,4 @@
   @media (max-width: 1359.98px) {
     display: flex;
   }
-}
-.about-decor {
-  transform: scale(-1, 1);
-  right: 0;
 }

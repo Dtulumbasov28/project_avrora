@@ -53,6 +53,7 @@
   // .gallery__img
 
   &__img {
+    border-radius: 10px;
     @media (max-width: $mobileSmall) {
       width: 320px;
     }
