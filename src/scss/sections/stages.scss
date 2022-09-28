@@ -91,7 +91,7 @@
     transition: width 0.5s ease-out; /*задаём время анимации*/
   }
   &::before {
-    content: url("../../img/decor_qualities.svg");
+    content: url("@img/decor_qualities.svg");
     position: absolute;
     left: -50px;
     opacity: 0;
@@ -172,7 +172,7 @@
       &::after {
         transition: opacity 0.4s;
         opacity: 1;
-        content: url("../../img/decor_tabs.png");
+        content: url("@img/decor_tabs.png");
         position: absolute;
       }
 
@@ -204,7 +204,7 @@
       &::after {
         transition: opacity 0.4s;
         opacity: 1;
-        content: url("../../img/decor_tabs.png");
+        content: url("@img/decor_tabs.png");
         position: absolute;
       }
 

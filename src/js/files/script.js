@@ -17,7 +17,7 @@ function init() {
 
     {
       iconLayout: "default#image",
-      iconImageHref: "../../img/placemark.svg",
+      iconImageHref: "../img/placemark.svg",
       iconImageSize: [56, 76],
     }
   );

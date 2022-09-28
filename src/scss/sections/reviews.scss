@@ -14,7 +14,7 @@
     position: relative;
 
     &::before {
-      content: url("../../img/decor_background.png");
+      content: url("@img/decor_background.png");
       position: absolute;
       left: -100px;
       bottom: 0;

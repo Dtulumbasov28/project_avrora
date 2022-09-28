@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /images/
-Disallow: /js/
-Disallow: /css/
+Disallow: /sendCall.php
+Disallow: /sendQuestion.php

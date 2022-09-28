@@ -76,6 +76,10 @@ body::after {
 .popup__content-politic {
   width: 80%;
   background-color: #fff;
+
+  & span {
+    width: 100%;
+  }
 }
 .popup__title {
   color: $mainColorBrown;

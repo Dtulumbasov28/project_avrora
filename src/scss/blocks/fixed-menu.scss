@@ -41,7 +41,7 @@
   }
 
   &::before {
-    content: url("../../img/decor__background-benefits.png");
+    content: url("@img/decor__background-benefits.png");
     position: absolute;
     transform: scale(-1, 1);
     bottom: 240px;
