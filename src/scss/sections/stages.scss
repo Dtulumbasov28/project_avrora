@@ -107,6 +107,10 @@
       display: block;
       opacity: 1;
       transition: opacity 0.5s;
+
+      @media (max-width: $mobileSmall) {
+        display: none;
+      }
     }
   }
 }

@@ -67,7 +67,7 @@
 
   &__subtitle {
     @include adaptiveValue("font-size", 28, 14, 1920, 319.98, 1);
-    @include adaptiveValue("width", 1000, 300, 991.98, 319.98, 1);
+    @include adaptiveValue("width", 700, 300, 991.98, 319.98, 1);
 
     text-align: center;
 

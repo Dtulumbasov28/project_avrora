@@ -45,6 +45,7 @@ body::after {
   justify-content: center;
 }
 .popup__content {
+  position: relative;
   @include adaptiveValue("width", 500, 320, 991.98, 319.98, 1);
 
   display: flex;
@@ -61,8 +62,34 @@ body::after {
     visibility: visible;
   }
 
+
+  
+
   @media (max-width: $mobileSmall) {
     padding: 20px 10px;
+  }
+}
+.popup__content-call,
+.popup__content-question {
+  &::before {
+    content: url("@img/decor_background.png");
+    position: absolute;
+    top: -28px;
+    z-index: 1;
+    right: -66px;
+    transform: scale(-1, 1);
+    scale: 0.6;
+
+    @media (max-width: $mobileSmall) {
+      top: -82px;
+      right: -102px;
+    }
+  }
+}
+.popup__content-call {
+  &::before {
+    top: -128px;
+
   }
 }
 .popup__content-reviews {
@@ -90,6 +117,7 @@ body::after {
 }
 
 .popup__form {
+  z-index: 2;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -135,6 +163,7 @@ body::after {
   border: 2px solid $mainColorGrey;
   padding: 2px 30px;
   margin-bottom: 30px;
+  background-color: transparent;
 
   @media (max-width: $mobileSmall) {
     margin-bottom: 20px;

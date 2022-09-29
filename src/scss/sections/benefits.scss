@@ -130,9 +130,11 @@
     }
 
     @media (max-width: $mobile) {
-      &::before,
+      &::before {
+        left: -255px;
+      }
       &::after {
-        display: none;
+        right: -255px;
       }
     }
     @media (max-width: $mobileSmall) {

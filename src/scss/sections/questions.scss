@@ -152,7 +152,6 @@
   & .tabs__content {
     width: auto;
     height: auto;
-    padding: 100;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -209,6 +208,10 @@
       display: block;
       opacity: 1;
       transition: opacity 0.5s;
+      
+      @media (max-width: $mobileSmall) {
+        display: none;
+      }
     }
   }
 }

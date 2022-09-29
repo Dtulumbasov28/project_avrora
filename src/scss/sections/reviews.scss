@@ -19,8 +19,10 @@
       left: -100px;
       bottom: 0;
 
-      @media (max-width: $tablet) {
-        display: none;
+      @media (max-width: $mobile) {
+        left: -148px;
+        top: -213px;
+        scale: 0.8;
       }
     }
   }
