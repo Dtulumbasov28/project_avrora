@@ -39,6 +39,7 @@
 
   &__body {
     width: 990px;
+    margin-bottom: 20px;
 
     @media (max-width: 1360px) {
       width: 660px;
@@ -48,9 +49,6 @@
     }
     @media (max-width: $mobileSmall) {
       width: 300px;
-    }
-    &:last-child {
-      margin-bottom: 28px;
     }
   }
 

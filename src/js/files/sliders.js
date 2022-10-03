@@ -120,14 +120,9 @@ function initSliders() {
 			// Указываем класс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Autoplay],
-			//автопрокрутка
-			autoplay: {
-				delay: 3000,
-				pauseOnMouseEnter: true,
-			},
+			modules: [Navigation],
 			breakpoints: {
-				1360: { autoplay: false, navigation: false, slidesPerView: 4 },
+				1360: { navigation: false, slidesPerView: 4 },
 				1060: {
 					slidesPerView: 3,
 				},
@@ -218,14 +213,10 @@ function initSliders() {
 			// Указываем класс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Autoplay],
-			//автопрокрутка
-			autoplay: {
-				delay: 3000,
-				pauseOnMouseEnter: true,
-			},
+			modules: [Navigation],
+
 			breakpoints: {
-				1360: { autoplay: false, navigation: false, slidesPerView: 4 },
+				1360: { navigation: false, slidesPerView: 4 },
 				1060: {
 					slidesPerView: 3,
 				},
@@ -392,14 +383,9 @@ function initSliders() {
 			// Указываем класс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Autoplay],
-			//автопрокрутка
-			autoplay: {
-				delay: 3000,
-				pauseOnMouseEnter: true,
-			},
+			modules: [Navigation],
 			breakpoints: {
-				1360: { autoplay: false, navigation: false, slidesPerView: 3 },
+				1360: { navigation: false, slidesPerView: 3 },
 
 				670: { slidesPerView: 2 },
 				300: {
@@ -485,12 +471,8 @@ function initSliders() {
 			// Указываем класс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Autoplay],
-			//автопрокрутка
-			autoplay: {
-				delay: 3000,
-				pauseOnMouseEnter: true,
-			},
+			modules: [Navigation],
+
 			breakpoints: {
 				1920: {
 					slidesPerView: 5,
@@ -585,12 +567,7 @@ function initSliders() {
 			// Указываем класс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Autoplay],
-			//автопрокрутка
-			autoplay: {
-				delay: 3000,
-				pauseOnMouseEnter: true,
-			},
+			modules: [Navigation],
 			breakpoints: {
 				1359: {
 					slidesPerView: 2,

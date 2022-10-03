@@ -629,7 +629,6 @@
                 this.options.init ? this.initPopups() : null;
             }
             initPopups() {
-                this.popupLogging(`Проснулся`);
                 this.eventsPopup();
             }
             eventsPopup() {
@@ -645,7 +644,7 @@
                             this._selectorOpen = true;
                             this.open();
                             return;
-                        } else this.popupLogging(`Ой ой, не заполнен атрибут у ${buttonOpen.classList}`);
+                        }
                         return;
                     }
                     const buttonClose = e.target.closest(`[${this.options.attributeCloseButton}]`);
@@ -730,7 +729,6 @@
                                 popup: this
                             }
                         }));
-                        this.popupLogging(`Открыл попап`);
                     } else this.popupLogging(`Ой ой, такого попапа нет.Проверьте корректность ввода. `);
                 }
             }
@@ -765,7 +763,6 @@
                 setTimeout((() => {
                     this._focusTrap();
                 }), 50);
-                this.popupLogging(`Закрыл попап`);
             }
             _getHash() {
                 if (this.options.hashSettings.location) this.hash = this.targetOpen.selector.includes("#") ? this.targetOpen.selector : this.targetOpen.selector.replace(".", "#");
@@ -831,8 +828,7 @@
                         behavior: "smooth"
                     });
                 }
-                FLS(`[gotoBlock]: Юхуу...едем к ${targetBlock}`);
-            } else FLS(`[gotoBlock]: Ой ой..Такого блока нет на странице: ${targetBlock}`);
+            }
         };
         let formValidate = {
             getErrors(form) {
@@ -4673,14 +4669,9 @@
                 on: {}
             });
             if (document.querySelector(".about-cards-top")) new core(".about-cards-top", {
-                modules: [ Navigation, Autoplay ],
-                autoplay: {
-                    delay: 3e3,
-                    pauseOnMouseEnter: true
-                },
+                modules: [ Navigation ],
                 breakpoints: {
                     1360: {
-                        autoplay: false,
                         navigation: false,
                         slidesPerView: 4
                     },
@@ -4709,14 +4700,9 @@
                 on: {}
             });
             if (document.querySelector(".about-cards-bottom")) new core(".about-cards-bottom", {
-                modules: [ Navigation, Autoplay ],
-                autoplay: {
-                    delay: 3e3,
-                    pauseOnMouseEnter: true
-                },
+                modules: [ Navigation ],
                 breakpoints: {
                     1360: {
-                        autoplay: false,
                         navigation: false,
                         slidesPerView: 4
                     },
@@ -4765,14 +4751,9 @@
                 on: {}
             });
             if (document.querySelector(".benefits__body")) new core(".benefits__body", {
-                modules: [ Navigation, Autoplay ],
-                autoplay: {
-                    delay: 3e3,
-                    pauseOnMouseEnter: true
-                },
+                modules: [ Navigation ],
                 breakpoints: {
                     1360: {
-                        autoplay: false,
                         navigation: false,
                         slidesPerView: 3
                     },
@@ -4797,11 +4778,7 @@
                 on: {}
             });
             if (document.querySelector(".team__cards")) new core(".team__cards", {
-                modules: [ Navigation, Autoplay ],
-                autoplay: {
-                    delay: 3e3,
-                    pauseOnMouseEnter: true
-                },
+                modules: [ Navigation ],
                 breakpoints: {
                     1920: {
                         slidesPerView: 5
@@ -4834,11 +4811,7 @@
                 on: {}
             });
             if (document.querySelector(".documents__cards")) new core(".documents__cards", {
-                modules: [ Navigation, Autoplay ],
-                autoplay: {
-                    delay: 3e3,
-                    pauseOnMouseEnter: true
-                },
+                modules: [ Navigation ],
                 breakpoints: {
                     1359: {
                         slidesPerView: 2
