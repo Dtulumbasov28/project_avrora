@@ -35,6 +35,8 @@
   display: flex;
   justify-content: center;
   gap: 10px;
+  width: auto !important;
+  left: 50%;
 
   @media (max-width: $tablet) {
     flex-direction: column;

@@ -57,12 +57,12 @@
   // .documents__card
 
   &__card {
-    border-radius: 10px;
+    border-radius: 12px;
     position: relative;
 
     &:hover {
       &::after {
-        content: "Диплом  Сотрудника";
+        content: attr(data-document);
         color: #fff;
         font-weight: 700;
         text-align: center;

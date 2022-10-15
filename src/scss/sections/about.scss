@@ -149,7 +149,6 @@
     }
   }
 }
-
 .card {
   display: flex;
   flex-direction: column;
@@ -251,3 +250,6 @@
     display: flex;
   }
 }
+.about__card picture {
+	width: 100%;
+ }

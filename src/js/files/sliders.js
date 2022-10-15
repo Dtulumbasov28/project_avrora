@@ -12,7 +12,6 @@ import Swiper, {
 	Pagination,
 	Autoplay,
 	EffectFade,
-	Parallax,
 } from "swiper";
 /*
 Основниые модули слайдера:
@@ -304,7 +303,7 @@ function initSliders() {
 			// Указываем класс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Pagination, Autoplay, EffectFade],
+			modules: [Navigation, Pagination, EffectFade],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -313,10 +312,6 @@ function initSliders() {
 			speed: 800,
 			loop: true,
 			effect: "fade",
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
 
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -656,12 +651,12 @@ function initSliders() {
 			// Указываем класс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Autoplay],
+			modules: [Navigation],
 			//автопрокрутка
-			autoplay: {
-				delay: 3000,
-				pauseOnMouseEnter: true,
-			},
+			// autoplay: {
+			// 	delay: 3000,
+			// 	pauseOnMouseEnter: true,
+			// },
 			breakpoints: {
 				1359: {
 					slidesPerView: 2,
@@ -750,12 +745,12 @@ function initSliders() {
 			// Указываем класс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation, Autoplay],
+			modules: [Navigation],
 			//автопрокрутка
-			autoplay: {
-				delay: 3000,
-				pauseOnMouseEnter: true,
-			},
+			// autoplay: {
+			// 	delay: 3000,
+			// 	pauseOnMouseEnter: true,
+			// },
 			observer: true,
 			observeParents: true,
 			// кол-во видимых слайдов на странице
